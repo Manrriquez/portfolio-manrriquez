@@ -14,7 +14,7 @@ const Container = styled.div`
      max-width: 1140px;
     }
 
-    @media (min-width: 992px) {
+    @media (max-width: 992px) {
      max-width: 960px;
     }
 
@@ -37,6 +37,7 @@ const Row = styled.div`
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     margin-top: calc(var(--bs-gutter-y) * -1);
 `;
@@ -46,6 +47,7 @@ const Col = styled.div`
     @media (min-width: 992px) {}
         flex: 1 0 0%;
     }
+    margin-top: ${props => props.size};
 `;
 
 export {Container, StyledSection, Row, Col};
