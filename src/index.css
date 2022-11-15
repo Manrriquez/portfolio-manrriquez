@@ -1,0 +1,12 @@
+
+.sc-lllmON.hSCUoI.collapsed{
+    max-height: 0;
+    transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+}
+
+
+.sc-gikAfH.cyiNZs.open::after {
+    content: "";
+    border-top: 0;
+    border-bottom: 5px solid;
+}

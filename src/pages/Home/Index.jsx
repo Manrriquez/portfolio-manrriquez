@@ -2,6 +2,7 @@ import React from 'react'
 import About from '../../components/About/Index';
 import Intro from '../../components/Intro/Index';
 import Navbar from '../../components/Navbar/Index';
+import Skills from '../../components/Skills/Index';
 import GlobalStyled from '../../styles/GlobalStyled';
 
 
@@ -15,6 +16,7 @@ const Home = () => {
         <main>
           <Intro />
           <About />
+          <Skills />
         </main>
     </>
   )

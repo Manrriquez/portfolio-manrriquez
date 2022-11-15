@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Col, Container, Row, StyledSection } from '../../styles/GlobalGrid';
-import { DescriptionText, ImageJob } from './styled';
+import { BoxFlex, BoxItem, DescriptionText, ImageJob, NumberCounterText, TextCounterDescription } from './styled';
 import JobImage from '../../img/ImageJob.png'
 import { TypographyDescription, TypographyTitle } from '../../styles/GlobalTypography';
-import { Box } from '../../styles/GlobalComponents';
+import { Box, ButtonPrimary } from '../../styles/GlobalComponents';
 import CountUp from 'react-countup';
 
 
@@ -24,10 +24,27 @@ const About = () => {
                             <ImageJob src={JobImage} />
                         </Col>
                         <Col>
-                            <DescriptionText>Desenvolvedor Full Stack com foco em backend, Ui Design, aficionado por pixel perfect, entregando e desenvolvendo projetos com qualidade.</DescriptionText>
-                            <h3>
-                                <CountUp end={100} duration="50" />
-                            </h3>
+                            <BoxItem>
+                                <DescriptionText>Desenvolvedor Full Stack com foco em backend, Ui Design, aficionado por pixel perfect, entregando e desenvolvendo projetos com qualidade.</DescriptionText>
+                                <BoxFlex>
+                                    <BoxItem>
+                                        <NumberCounterText>
+                                            <CountUp end={1} durantion="200" />+
+                                        </NumberCounterText>
+                                        <TextCounterDescription>Ano <br /> de experiência</TextCounterDescription>
+                                    </BoxItem>
+
+                                    <BoxItem>
+                                        <NumberCounterText>
+                                            <CountUp end={15} durantion="200" />+
+                                        </NumberCounterText>
+                                        <TextCounterDescription>Projetos <br /> Finalizados</TextCounterDescription>
+                                    </BoxItem>
+                                </BoxFlex>
+                                <BoxFlex>
+                                <ButtonPrimary width="80%">BAIXAR CV</ButtonPrimary>
+                                </BoxFlex>
+                            </BoxItem>
                         </Col>
                     </Row>
                 </Col>

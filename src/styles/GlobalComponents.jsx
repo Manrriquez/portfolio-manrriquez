@@ -10,6 +10,7 @@ const ButtonPrimary = styled.button`
     color: white;
     font-weight: 600;
     font-size: 16px;
+    width: ${props => props.width};
     transition: 0.2s;
     padding: 11px 26px 11px 26px;
   
@@ -17,6 +18,10 @@ const ButtonPrimary = styled.button`
     background: white;
     border: 2px solid #FCA61F;
     color: #FCA61F;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;
 
