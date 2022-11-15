@@ -1,9 +1,14 @@
 import React from 'react'
 import { ButtonPrimary } from '../../styles/GlobalComponents';
 import { Col, Container, Row, StyledSection } from '../../styles/GlobalGrid';
-import {HomeDescription, HomeSubtitle, HomeTitle, BackgroundFound, IconSvgAnimatedJava } from './Styled';
+import {HomeDescription, HomeSubtitle, HomeTitle, BackgroundFound, IconAnimatedJava,
+     IconAnimatedHttps, IconAnimatedApp, IconAnimatedMysql } from './Styled';
 import PersonalHome from '../../img/IMAGE-HOME.png'
 import IconJava from '../../img/JavaIcon.png'
+import IconHttps from '../../img/HttpsIcon.png'
+import IconApp from '../../img/AppIcon.png'
+import IconMysql from '../../img/MySqlIcon.png'
+
 
 
 const Intro = () => {
@@ -25,7 +30,10 @@ const Intro = () => {
                 <Col size="4rem">
                     <div>
                         <BackgroundFound url={PersonalHome}>
-                            <IconSvgAnimatedJava src={IconJava}/>
+                            <IconAnimatedJava src={IconJava}/>
+                            <IconAnimatedHttps src={IconHttps}/>
+                            <IconAnimatedApp src={IconApp}/>
+                            <IconAnimatedMysql src={IconMysql}/>
                         </BackgroundFound>
                     </div>
                 </Col>

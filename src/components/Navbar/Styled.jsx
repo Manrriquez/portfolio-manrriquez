@@ -38,6 +38,7 @@ const NavbarList = styled.ul`
 
     display: flex;
     padding-left: 0;
+    align-items:    center;
     margin-bottom: 0;
     list-style: none;
 `;

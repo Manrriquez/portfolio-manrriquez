@@ -63,10 +63,39 @@ const AnimatedIcon = keyframes`
 `;
 
 
-const IconSvgAnimatedJava = styled.img`
+const IconAnimatedJava = styled.img`
     width: 70px;
+	position: relative;
     animation: ${AnimatedIcon} 8s linear 0s infinite;
+	left: 50px;
+	top: 75px;
+`;
+
+const IconAnimatedApp = styled.img`
+	width: 70px;
+	position: relative;
+	animation: ${AnimatedIcon} 8s linear 0s infinite;
+	left: 35px;
+	bottom: 50px;
+`;
+
+const IconAnimatedHttps = styled.img`
+	width: 70px;
+	position: relative;
+	animation: ${AnimatedIcon} 8s linear 0s infinite;
+	left: 315px;
+	top: 100px;
+`;
+
+const IconAnimatedMysql = styled.img`
+	width: 70px;
+	position: relative;
+	animation: ${AnimatedIcon} 8s linear 0s infinite;
+	left: 250px;
+	bottom: 30px;
 `;
 
 
-export {HomeTitle, HomeSubtitle, HomeDescription, BackgroundFound, IconSvgAnimatedJava, AnimatedIcon};
+
+export {HomeTitle, HomeSubtitle, HomeDescription, BackgroundFound, IconAnimatedJava,
+	 IconAnimatedApp, IconAnimatedHttps, IconAnimatedMysql};

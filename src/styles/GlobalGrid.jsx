@@ -44,10 +44,14 @@ const Row = styled.div`
 
 const Col = styled.div`
 
-    @media (min-width: 992px) {}
+    @media (min-width: 992px) {
         flex: 1 0 0%;
     }
     margin-top: ${props => props.size};
 `;
+
+
+
+
 
 export {Container, StyledSection, Row, Col};

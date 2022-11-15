@@ -2,10 +2,17 @@ import styled from "styled-components";
 
 
 
-const TipographyTitle = styled.h1``;
+const TypographyTitle = styled.h2`
+    font-weight: 700;
+    font-size: clamp(36px, 3vw, 42px);
+    color: #393536;
+    text-align: center;
+`;
+const TypographyDescription = styled.p`
+    font-weight: 500;
+    font-size: clamp(18px, 3vw, 20px);
+    text-align: center;
+    color: #FCA61F;
+`;
 
-const TypographySubtitle = styled.h2``;
-
-const TipographyDescription = styled.p``;
-
-export {TipographyTitle, TypographySubtitle, TipographyDescription};
+export {TypographyTitle, TypographyDescription};
