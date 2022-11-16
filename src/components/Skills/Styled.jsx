@@ -2,8 +2,13 @@ import styled from "styled-components";
 
 
 const Wrapper = styled.div`
-    width: 600px;
+    width: 500px;
     margin: 0 auto;
+
+    @media (max-width: 792px) {
+        width: 100%;
+    
+    }
 `;
 
 const AccordionWrapper = styled.div`
@@ -26,13 +31,15 @@ const AccordionContent = styled.div`
 const AccordionTitle = styled.div`
     font-weight: 600;
     cursor: pointer;
-    color: #666;
-    padding: 0.5em 1.5em;
-    border: solid 1px #ccc;
-    border-radius: 1.5em;
+    color: #393536;
+    padding: 0.8em 1.5em;
+    border: solid 1px #FCA61F;
+    border-radius: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    box-shadow: 0px 20px 24px 3px rgba(255, 186, 94, 0.24);;
 
     &::after {
         content: "";
@@ -44,23 +51,20 @@ const AccordionTitle = styled.div`
     }
 
     &:hover {
-        color: black;
+        color: #FCA61F;
     }
 
 `;
 
-const ActiveOpen = styled.div`
-    &::after {
-        content: "";
-        border-top: 0;
-        border-bottom: 5px solid;
+const FlexLg = styled.div`
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    @media (min-width: 992px) {
+    display: flex;
+
     }
-
 `;
 
-const Collapsed = styled.div`
-max-height: 0;
-        transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
-`;
 
-export {Wrapper, AccordionWrapper, AccordionItem, AccordionTitle, AccordionContent, ActiveOpen, Collapsed};
+export {Wrapper, AccordionWrapper, AccordionItem, AccordionTitle, AccordionContent, FlexLg};
