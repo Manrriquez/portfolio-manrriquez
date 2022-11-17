@@ -4,7 +4,6 @@ import { TypographyDescription, TypographyTitle } from '../../styles/GlobalTypog
 import { Box} from '../../styles/GlobalComponents';
 import {Bloco, FlexLg} from './Styled';
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -46,7 +45,6 @@ const Projects = () => {
                                 <SwiperSlide><Bloco></Bloco></SwiperSlide>
                                 <SwiperSlide><Bloco></Bloco></SwiperSlide>
                                 <SwiperSlide><Bloco></Bloco></SwiperSlide>
-                               
                             </Swiper>
                         </Col>
                     </Row>

@@ -11,12 +11,12 @@ const ButtonPrimary = styled.button`
     font-weight: 600;
     font-size: 16px;
     width: ${props => props.width};
-    transition: 0.2s;
+    transition: 0.4s;
     padding: 11px 26px 11px 26px;
   
   &:hover {
     background: white;
-    border: 2px solid #FCA61F;
+    border: 1px solid #FCA61F;
     color: #FCA61F;
   }
 

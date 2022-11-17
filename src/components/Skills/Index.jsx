@@ -14,10 +14,10 @@ const Accordion = ({ title, children }) => {
     return (
         <AccordionWrapper>
             <AccordionTitle
-             className={`${isOpen ? "open" : ""}`} onClick={() => setOpen(!isOpen)}>
+             className={`accordion-title ${isOpen ? "open" : ""}`} onClick={() => setOpen(!isOpen)}>
                 {title}
             </AccordionTitle>
-            <AccordionItem className={`${!isOpen ? "collapsed" : ""}`}>
+            <AccordionItem className={`accordion-item ${!isOpen ? "collapsed" : ""}`}>
                 <AccordionContent>{children}</AccordionContent>
             </AccordionItem>
         </AccordionWrapper>
