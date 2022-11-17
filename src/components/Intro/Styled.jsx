@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components";
 const HomeTitle = styled.h1`
 
     font-weight: 800;
-    font-size: 55px;
+    font-size: clamp(43px, 3vw, 55px);
     line-height: 65px;
     color: #FCA61F;
 `;
@@ -11,7 +11,7 @@ const HomeTitle = styled.h1`
 const HomeSubtitle = styled.p`
 
     font-weight: 700;
-    font-size: 28px;
+    font-size: clamp(22px, 3vw, 28px);
     line-height: 25px;
     color: #393536;
 
@@ -21,7 +21,7 @@ const HomeSubtitle = styled.p`
 const HomeDescription = styled.p`
 
     font-weight: 500;
-    font-size: 20px;
+    font-size: clamp(16px, 3vw, 20px);
     line-height: 25px;
     color: rgba(57, 53, 54, 0.9);
 `;
@@ -31,6 +31,12 @@ const BackgroundFound = styled.div`
     background-repeat: no-repeat;
     background-size: 100%;
     height: 20rem;
+
+	@media (max-width: 992px) {
+		background-size: contain;
+		background-position: center;
+    }
+	
 `;
 
 const AnimatedIcon = keyframes`
@@ -64,35 +70,54 @@ const AnimatedIcon = keyframes`
 
 
 const IconAnimatedJava = styled.img`
-    width: 70px;
+    width: clamp(55px, 3vw, 70px);
 	position: relative;
     animation: ${AnimatedIcon} 8s linear 0s infinite;
 	left: 50px;
 	top: 75px;
+
+	@media (max-width: 992px) {
+		left: auto;
+		right: 75px;
+	}
 `;
 
 const IconAnimatedApp = styled.img`
-	width: 70px;
+    width: clamp(55px, 3vw, 70px);
 	position: relative;
 	animation: ${AnimatedIcon} 8s linear 0s infinite;
 	left: 35px;
 	bottom: 50px;
+
+	@media (max-width: 992px) {
+		left: auto;
+		right: 55px;
+
+	}
 `;
 
 const IconAnimatedHttps = styled.img`
-	width: 70px;
+    width: clamp(55px, 3vw, 70px);
 	position: relative;
 	animation: ${AnimatedIcon} 8s linear 0s infinite;
 	left: 315px;
 	top: 100px;
+
+	@media (max-width: 992px) {
+		left: 150px;
+	}
 `;
 
 const IconAnimatedMysql = styled.img`
-	width: 70px;
+    width: clamp(55px, 3vw, 70px);
 	position: relative;
 	animation: ${AnimatedIcon} 8s linear 0s infinite;
 	left: 250px;
 	bottom: 30px;
+
+	@media (max-width: 992px) {
+		left: 80px;
+	}
 `;
 
 

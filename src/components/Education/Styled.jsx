@@ -11,5 +11,15 @@ const FlexLg = styled.div`
     }
 `;
 
+const TextEducation = styled.h3`
+    font-weight: 700;
+    font-size: clamp(22px, 3vw, 26px);
+    color: #393536;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
 
-export {FlexLg};
+`;
+
+
+export {FlexLg, TextEducation};

@@ -16,7 +16,7 @@ const Intro = () => {
     <StyledSection>
         <Container>
             <Row>
-                <Col size="4rem">
+                <Col size="clamp(10rem, 3vw, 14rem)">
                     <div>
                         <HomeSubtitle>Olá me chamo</HomeSubtitle>
                         <HomeTitle>LUIS FERNANDO</HomeTitle>
@@ -27,7 +27,7 @@ const Intro = () => {
                         <ButtonPrimary>ENTRE EM CONTATO</ButtonPrimary>
                     </div>
                 </Col>
-                <Col size="4rem">
+                <Col size="clamp(10rem, 3vw, 14rem)">
                     <div>
                         <BackgroundFound url={PersonalHome}>
                             <IconAnimatedJava src={IconJava}/>

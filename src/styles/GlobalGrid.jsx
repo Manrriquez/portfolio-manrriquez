@@ -44,8 +44,13 @@ const Row = styled.div`
 
 const Col = styled.div`
 
-    @media (min-width: 992px) {
+    @media (min-width: 792px) {
         flex: 1 0 0%;
+    }
+
+    @media (max-width: 992px) {
+        text-align: center;
+        width: 100%;
     }
     margin-top: ${props => props.size};
 `;

@@ -18,7 +18,7 @@ const Home = () => {
     <>
       <GlobalStyled />
         <Navbar  />
-
+        <ButtonWhatsApp />
         <main>
           <Intro />
           <About />
@@ -27,10 +27,7 @@ const Home = () => {
           <Banner />
           <Projectx />
           <Contact />
-        </main>
-
-        <ButtonWhatsApp />
-        
+        </main>        
         <Footer />
     </>
   )

@@ -37,18 +37,22 @@ const ImageJob = styled.img`
     width: auto;
 	animation: ${AnimatedImageJob} 8s linear 0s infinite;
 
+	@media (max-width: 792px) {
+		display: none;
+	}
+
 `;
 
 const DescriptionText = styled.p`
-font-weight: 500;
-font-size: 25px;
-text-align: center;
-color: rgba(57, 53, 54, 0.9);
+	font-weight: 500;
+	font-size: clamp(18px, 3vw, 25px);
+	text-align: center;
+	color: rgba(57, 53, 54, 0.9);
 `;
 
 const NumberCounterText = styled.h3`
 	font-weight: 800;
-	font-size: 65px;
+	font-size: clamp(48px, 3vw, 65px);
 	line-height: 35px;
 	text-align: center;
 	color: #393536;
@@ -57,7 +61,7 @@ const NumberCounterText = styled.h3`
 `;
 const TextCounterDescription = styled.p`
 	font-weight: 700;
-	font-size: 24px;
+	font-size: clamp(22px, 3vw, 24px);
 	text-align: center;
 	color: #393536;
 `;

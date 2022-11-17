@@ -11,6 +11,7 @@ const ButtonPrimary = styled.button`
     font-weight: 600;
     font-size: 16px;
     width: ${props => props.width};
+    margin-left: ${props => props.left};
     transition: 0.4s;
     padding: 11px 26px 11px 26px;
   
@@ -23,6 +24,7 @@ const ButtonPrimary = styled.button`
   @media (max-width: 768px) {
     width: 100%;
   }
+  
 `;
 
 const Box = styled.div`
