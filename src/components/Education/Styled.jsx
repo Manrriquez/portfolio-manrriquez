@@ -6,8 +6,7 @@ const FlexLg = styled.div`
     margin-bottom: 0.5rem;
 
     @media (min-width: 992px) {
-    display: flex;
-
+     display: flex;
     }
 `;
 

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 
 const CardBanner = styled.div`
@@ -11,8 +11,8 @@ const FlexLg = styled.div`
     justify-content: center;
     align-items: center;
 
-    @media (min-width: 992px) {
-    display: flex;
+    @media (min-width: 592px) {
+     display: flex;
 
     }
 `;
@@ -25,7 +25,7 @@ const ButtonSecondary = styled.button`
     border: none;
     color: #FCA61F;
     font-weight: 600;
-    font-size: 16px;
+    font-size: clamp(14px, 3vw, 16px);
     width: ${props => props.width};
     transition: 0.2s;
     padding: 11px 26px 11px 26px;
@@ -44,7 +44,7 @@ const ButtonSecondary = styled.button`
 const TypographyBanner = styled.p`
     font-style: normal;
     font-weight: 600;
-    font-size: 20px;
+    font-size: clamp(18px, 3vw, 20px);
     color: #FFFFFF;
     margin-bottom: 20px;
     max-width: 600px;
@@ -54,9 +54,40 @@ const BoxBanner = styled.div`
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
 `;
+const AnimatedImageBanner = keyframes`
+
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70% {
+		transform: translateY(-8px);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: translateY(8px);
+	}
+
+	80% {
+		transform: translateY(6.4px);
+	}
+
+	90% {
+		transform: translateY(-6.4px);
+	}
+`;
+
 
 const ContactImage = styled.img`
-    width: 100%
+    width: 300;
+
+    animation: ${AnimatedImageBanner} 8s linear 0s infinite;
 `;
 
 export {CardBanner, FlexLg,BoxBanner, ContactImage, TypographyBanner, ButtonSecondary};

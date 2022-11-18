@@ -1,8 +1,8 @@
 import React from 'react'
 import { Col, Container, Row, StyledSection } from '../../styles/GlobalGrid';
 import { TypographyDescription, TypographyTitle } from '../../styles/GlobalTypography';
-import { Box} from '../../styles/GlobalComponents';
-import {Bloco, FlexLg} from './Styled';
+import { Box, ButtonPrimary} from '../../styles/GlobalComponents';
+import {Bloco, BoxProject, FlexLg} from './Styled';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -38,13 +38,21 @@ const Projects = () => {
                                 modules={[Pagination, Navigation]}
                                 className="mySwiper"
                             >
-                                <SwiperSlide><Bloco></Bloco></SwiperSlide>
-                                <SwiperSlide><Bloco></Bloco></SwiperSlide>
-                                <SwiperSlide><Bloco></Bloco></SwiperSlide>
-                                <SwiperSlide><Bloco></Bloco></SwiperSlide>
-                                <SwiperSlide><Bloco></Bloco></SwiperSlide>
-                                <SwiperSlide><Bloco></Bloco></SwiperSlide>
-                                <SwiperSlide><Bloco></Bloco></SwiperSlide>
+                                <SwiperSlide>
+                                    <BoxProject>
+                                        <FlexLg>
+                                            <Bloco></Bloco>
+                                            <div>
+                                                <p style={{maxWidth: "500px", marginBottom: "25px", textAlign: "initial"}}>
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ex distinctio inventore, maxime eligendi omnis!
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ex distinctio inventore, maxime eligendi omnis!
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ex distinctio inventore, maxime eligendi omnis!
+                                                </p>
+                                                <ButtonPrimary width="100%">VER PROJETO</ButtonPrimary>
+                                            </div>
+                                        </FlexLg>
+                                    </BoxProject>
+                                </SwiperSlide>
                             </Swiper>
                         </Col>
                     </Row>
