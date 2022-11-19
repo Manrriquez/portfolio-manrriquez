@@ -20,5 +20,15 @@ const TextEducation = styled.h3`
 
 `;
 
+const BoxEducation = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2.5rem;
+`;
 
-export {FlexLg, TextEducation};
+const BoxTimeline = styled.div`
+    width: 100%;
+`;
+
+
+export {FlexLg, TextEducation, BoxEducation, BoxTimeline};

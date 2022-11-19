@@ -43,11 +43,11 @@ const ButtonSecondary = styled.button`
 
 const TypographyBanner = styled.p`
     font-style: normal;
-    font-weight: 600;
-    font-size: clamp(18px, 3vw, 20px);
+    font-weight: 400;
+    font-size: clamp(16px, 3vw, 17px);
     color: #FFFFFF;
     margin-bottom: 20px;
-    max-width: 600px;
+    max-width: 570px;
 `;
 
 const BoxBanner = styled.div`

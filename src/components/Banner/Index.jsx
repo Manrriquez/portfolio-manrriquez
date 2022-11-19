@@ -16,11 +16,15 @@ const Banner = () => {
                         <FlexLg>
                             <BoxBanner>
                                 <TypographyBanner>
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                                    Corrupti recusandae quas mollitia voluptatibus doloremque.
-                                    Totam illum minima cum veniam quis.
+                                   Estou disponivel para trabalhos Full-time, Part-time e Freelancer, seja remoto ou presencial,
+                                    Vamos conversar?
+                                   Acredito ter autonomia para participar no desenvolvimento de
+                                     projetos reais com metodologias agéis. <br />
+                                   Caso por ventura eu não tenha ou sequer possa ter dificuldade, procuro aprender e me aprimorar para voltar e desenvolver com
+                                   maestria, ninguem nasce sabendo de tudo, tudo se aprende e se aprimora, como dizem por ai <strong>"todo sênior já foi um junior"</strong>, 
+                                   dito isto, clique no botão abaixo e vamos bater um papo!
                                 </TypographyBanner>
-                                <ButtonSecondary>ENTRAR EM CONTATO</ButtonSecondary>
+                                <ButtonSecondary>ENTRE EM CONTATO</ButtonSecondary>
                             </BoxBanner>
                             <BoxBanner>
                                 <ContactImage src={ImageContact} />

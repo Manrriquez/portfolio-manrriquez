@@ -13,6 +13,9 @@ const TypographyDescription = styled.p`
     font-size: clamp(16px, 3vw, 20px);
     text-align: center;
     color: #FCA61F;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 670px;
 `;
 
 export {TypographyTitle, TypographyDescription};

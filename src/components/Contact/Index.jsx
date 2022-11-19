@@ -1,7 +1,8 @@
 import React from 'react'
 import { Col, Container, Row, StyledSection } from '../../styles/GlobalGrid';
 import { TypographyDescription, TypographyTitle } from '../../styles/GlobalTypography';
-import { Box} from '../../styles/GlobalComponents';
+import { Box, ButtonPrimary} from '../../styles/GlobalComponents';
+import { BoxForm, COlForm, COlMdForm, InputContact, LabelContact, StyledForm, TextareaContact} from './Styled';
 
 
 
@@ -19,7 +20,34 @@ const Contact = () => {
                     </Box>
                     <Row>
                         <Col>
-                            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                            <BoxForm>
+                                <StyledForm action='#'>
+
+                                    <Row>
+                                        <COlMdForm>
+                                            <LabelContact>Nome</LabelContact>
+                                            <InputContact  placeholder='nome'/>
+                                        </COlMdForm>
+
+                                        <COlMdForm>
+                                            <LabelContact>E-mail</LabelContact>
+                                            <InputContact  placeholder='fulano@gmail.com'/>
+                                        </COlMdForm>
+
+                                        <COlForm>
+                                            <LabelContact>Titulo</LabelContact>
+                                            <InputContact  placeholder='Titulo de assunto'/>
+                                        </COlForm>
+
+                                        <COlForm>
+                                            <LabelContact>Mensagem</LabelContact>
+                                            <TextareaContact cols={40} rows={10} />
+                                        </COlForm>
+                                    </Row>
+
+                                    <ButtonPrimary width="100%">ENVIAR</ButtonPrimary>
+                                </StyledForm>
+                            </BoxForm>
                         </Col>
                     </Row>
                 </Col>

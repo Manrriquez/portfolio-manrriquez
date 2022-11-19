@@ -1,4 +1,6 @@
-
+html {
+  scroll-behavior: smooth;
+}
 .accordion-item.collapsed{
     max-height: 0;
     transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
@@ -66,3 +68,10 @@
   .swiper-button-next, .swiper-button-prev {
     color: orange!important;
   }
+
+
+h2.rect-progress-bar-percent {
+    margin: 1px!important;
+    margin-left: 20px!important;
+    font-size: clamp(18px, 3vw, 20px);
+}

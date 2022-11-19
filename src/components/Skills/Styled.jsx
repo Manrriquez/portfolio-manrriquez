@@ -24,8 +24,24 @@ const AccordionItem = styled.div`
 `;
 
 const AccordionContent = styled.div`
-    padding: 1em 1.5em;
+    padding: 20px 0px 20px 0px;
 
+`;
+const AccordionConjuntTitleAndIcon = styled.h4`
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+
+    svg {
+        font-size: 21px;
+    }
+`;
+
+const ProgressTitle = styled.h5`
+    font-weight: 700;
+    color: #393536;
+    font-size: clamp(16px, 3vw, 18px);
 `;
 
 const AccordionTitle = styled.div`
@@ -56,6 +72,11 @@ const AccordionTitle = styled.div`
 
 `;
 
+const AccordionBox = styled.div`
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+`;
+
 const FlexLg = styled.div`
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
@@ -67,4 +88,5 @@ const FlexLg = styled.div`
 `;
 
 
-export {Wrapper, AccordionWrapper, AccordionItem, AccordionTitle, AccordionContent, FlexLg};
+export {Wrapper, AccordionWrapper, AccordionItem, AccordionTitle,
+     AccordionContent, FlexLg, AccordionConjuntTitleAndIcon, ProgressTitle, AccordionBox};

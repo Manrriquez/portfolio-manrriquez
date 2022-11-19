@@ -18,11 +18,11 @@ const Navbar = () => {
                 <NavbarList>
                   
                     <NavbarListItem>
-                      <NavbarLinkItem href="#">Sobre mim</NavbarLinkItem>
+                      <NavbarLinkItem href="#about">Sobre mim</NavbarLinkItem>
                     </NavbarListItem>
 
                     <NavbarListItem>
-                      <NavbarLinkItem href="#">Educação</NavbarLinkItem>
+                      <NavbarLinkItem href="#">Timeline</NavbarLinkItem>
                     </NavbarListItem>
 
                     <NavbarListItem>

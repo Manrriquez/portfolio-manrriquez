@@ -40,6 +40,7 @@ const Row = styled.div`
     align-items: center;
     flex-wrap: wrap;
     margin-top: calc(var(--bs-gutter-y) * -1);
+
 `;
 
 const Col = styled.div`

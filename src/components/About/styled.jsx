@@ -45,8 +45,7 @@ const ImageJob = styled.img`
 
 const DescriptionText = styled.p`
 	font-weight: 500;
-	font-size: clamp(18px, 3vw, 25px);
-	text-align: center;
+	font-size: clamp(16px, 3vw, 17px);
 	color: rgba(57, 53, 54, 0.9);
 `;
 
