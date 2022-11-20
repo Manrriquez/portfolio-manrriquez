@@ -29,7 +29,7 @@ const Footer = () => {
                   </LinkSocial>
     
                 </FlexItems>
-                <TypographyFooter> Copyright © 2022 Luis Fernando • Desenvolvedor Backend </TypographyFooter>
+                <TypographyFooter> Copyright © 2022 Luis Fernando • Desenvolvedor Full Stack </TypographyFooter>
               </div>
           </Col>
         </Row>

@@ -23,7 +23,7 @@ const LinkSocial = styled.a`
 `;
 
 const IconSocial = styled.img`
-    width: 65px;
+    width: 38px;
 `;
 
 const TypographyFooter = styled.p `

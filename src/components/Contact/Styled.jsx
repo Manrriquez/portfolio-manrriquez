@@ -12,6 +12,7 @@ const BoxForm = styled.div`
 const StyledForm = styled.form`
     margin-left: 1.2rem;
     margin-right: 1.2rem;
+    text-align: initial;
 `;
 
 const LabelContact = styled.label`
@@ -24,12 +25,22 @@ const LabelContact = styled.label`
 const COlMdForm = styled.div`
     margin-bottom: 0.7rem;
     margin-top: 0.7rem;
+    width: 50%;
+    flex: 0 0 auto;
 
-    @media (min-width: 768px) {
-        flex: 0 0 auto;
-        width: 50%;
+    @media (max-width: 768px) {
+        width: 100%;
     }
 `;
+
+const BoxFLex = styled.div`
+    width: 100%;
+    @media (min-width: 868px) {
+        display: flex;
+        gap: 15px;
+    }
+`;
+
 const COlForm = styled.div`
     margin-bottom: 0.7rem;
     margin-top: 0.7rem;
@@ -82,4 +93,4 @@ const TextareaContact = styled.textarea`
 `;
 
 
-export {BoxForm, StyledForm, InputContact, LabelContact, COlMdForm, COlForm, TextareaContact};
+export {BoxForm, StyledForm, InputContact, LabelContact, COlMdForm, COlForm, TextareaContact, BoxFLex};

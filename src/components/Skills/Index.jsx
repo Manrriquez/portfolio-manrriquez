@@ -3,13 +3,61 @@ import { Col, Container, Row, StyledSection } from '../../styles/GlobalGrid';
 import { TypographyDescription, TypographyTitle } from '../../styles/GlobalTypography';
 import { Box} from '../../styles/GlobalComponents';
 import { AccordionBox, AccordionConjuntTitleAndIcon, AccordionContent, AccordionItem, AccordionTitle, AccordionWrapper, FlexLg, ProgressTitle, Wrapper } from './Styled';
-
+import SkillBar from 'react-skillbars';
 import {BsCodeSlash} from 'react-icons/bs'
 import {BiCodeCurly} from 'react-icons/bi'
 import {MdOutlineDesignServices} from 'react-icons/md'
 import {FiDatabase} from 'react-icons/fi'
-import ProgressBar from 'react-animated-progress-bar';
 
+
+const skillsFrontend = [
+    { type: 'ReactJS', level: 68 },
+    { type: 'VueJS', level: 73 },
+    { type: 'Styled-Components', level: 65 },
+    { type: 'Tailwind', level: 85 },
+    { type: 'Bootstrap', level: 87 },
+    { type: 'SASS', level: 78 },
+    { type: 'CSS', level:  92 }
+];
+
+const skillsBackend = [
+    { type: 'Java', level: 71 },
+    { type: 'Spring Boot', level: 55 },
+    { type: 'Junit', level: 45 },
+    { type: 'Swagger', level: 72 },
+    { type: 'JWT', level: 50 },
+    { type: 'Spring Security', level: 55 },
+    { type: 'NodeJS', level:  67 },
+    { type: 'Express', level:  61 },
+    { type: 'MySQL', level:  81 },
+    { type: 'MongoDB', level:  71 },
+];
+
+const skillsDevops = [
+    { type: 'Heroku', level: 75 },
+    { type: 'AWS', level: 66 },
+    { type: 'Github Actions', level: 66 },
+    { type: 'Azure', level: 60 },
+    { type: 'Docker', level: 72 },
+];
+
+const skillsOutros = [
+    { type: 'Figma', level: 65 },
+    { type: 'Github', level: 89 },
+    { type: 'Insomia', level: 66 },
+    { type: 'Linux', level: 70 },
+    { type: 'Ui Design', level: 64 },
+    { type: 'Colletions', level: 74 },
+];
+
+
+const colors = {
+    bar: "#FCA61F",
+    title: {
+      text: "#fff",
+      background: "#FCA61F"
+    }
+};
 
 
 const Accordion = ({ title, children, icon }) => {
@@ -31,7 +79,6 @@ const Accordion = ({ title, children, icon }) => {
     );
 };
 
-
 const Skills = () => {
     
   return (
@@ -51,125 +98,26 @@ const Skills = () => {
                             <FlexLg>
                                 <Wrapper>
                                     <Accordion icon={<BiCodeCurly/>} title="Frontend Development">
-                                        <AccordionBox>
-                                            <ProgressTitle>ReactJS</ProgressTitle>
-                                            <ProgressBar
-                                                    width="100%"
-                                                    height="13px"
-                                                    rect
-                                                    fontColor="orange"
-                                                    percentage="70"
-                                                    rectPadding="1px"
-                                                    rectBorderRadius="18px"
-                                                    trackPathColor="transparent"
-                                                    bgColor="#333333"
-                                                    defColor={{
-                                                        fair: 'orangered',
-                                                        good: 'yellow',
-                                                        excellent: 'green',
-                                                        poor: 'red',
-                                                      }}
-                                                    trackBorderColor="orange"
-                                                />
-                                        </AccordionBox>
-
-                                        <AccordionBox>
-                                            <ProgressTitle>ReactJS</ProgressTitle>
-                                            <ProgressBar
-                                                    width="100%"
-                                                    height="13px"
-                                                    rect
-                                                    fontColor="orange"
-                                                    percentage="80"
-                                                    rectPadding="1px"
-                                                    rectBorderRadius="18px"
-                                                    trackPathColor="transparent"
-                                                    bgColor="#333333"
-                                                    defColor={{
-                                                        fair: 'orangered',
-                                                        good: 'yellow',
-                                                        excellent: 'green',
-                                                        poor: 'red',
-                                                      }}
-                                                    trackBorderColor="orange"
-                                                />
-                                        </AccordionBox>
-
-                                        <AccordionBox>
-                                            <ProgressTitle>ReactJS</ProgressTitle>
-                                            <ProgressBar
-                                                    width="100%"
-                                                    height="13px"
-                                                    rect
-                                                    fontColor="orange"
-                                                    percentage="80"
-                                                    rectPadding="1px"
-                                                    rectBorderRadius="18px"
-                                                    trackPathColor="transparent"
-                                                    bgColor="#333333"
-                                                    defColor={{
-                                                        fair: 'orangered',
-                                                        good: 'yellow',
-                                                        excellent: 'green',
-                                                        poor: 'red',
-                                                      }}
-                                                    trackBorderColor="orange"
-                                                />
-                                        </AccordionBox>
-
-                                        <AccordionBox>
-                                            <ProgressTitle>ReactJS</ProgressTitle>
-                                            <ProgressBar
-                                                    width="100%"
-                                                    height="13px"
-                                                    rect
-                                                    fontColor="orange"
-                                                    percentage="80"
-                                                    rectPadding="1px"
-                                                    rectBorderRadius="18px"
-                                                    trackPathColor="transparent"
-                                                    bgColor="#333333"
-                                                    defColor={{
-                                                        fair: 'orangered',
-                                                        good: 'yellow',
-                                                        excellent: 'green',
-                                                        poor: 'red',
-                                                      }}
-                                                    trackBorderColor="orange"
-                                                />
-                                        </AccordionBox>
+                                        <SkillBar skills={skillsFrontend} colors={colors} height={30} />
                                     </Accordion>
-                                
                                 </Wrapper>
                                 <Wrapper>
                                     <Accordion icon={<BsCodeSlash />} title="Backend Development">
-                                    Sunlight reaches Earth's atmosphere and is scattered in all directions by
-                                    all the gases and particles in the air. Blue light is scattered more than
-                                    the other colors because it travels as shorter, smaller waves. This is why
-                                    we see a blue sky most of the time.
+                                     <SkillBar skills={skillsBackend} colors={colors} height={30} />
                                     </Accordion>
-                                
                                 </Wrapper>
                             </FlexLg>
 
                             <FlexLg>
                                 <Wrapper>
-                                    <Accordion icon={<MdOutlineDesignServices/>} title="UI Design">
-                                    Sunlight reaches Earth's atmosphere and is scattered in all directions by
-                                    all the gases and particles in the air. Blue light is scattered more than
-                                    the other colors because it travels as shorter, smaller waves. This is why
-                                    we see a blue sky most of the time.
+                                    <Accordion  icon={<FiDatabase />} title="DevOps" >
+                                       <SkillBar skills={skillsDevops} colors={colors} height={30} />     
                                     </Accordion>
-                                
                                 </Wrapper>
                                 <Wrapper>
-                                    <Accordion icon={<FiDatabase />} title="DevOps">
-                                    Sunlight reaches Earth's atmosphere and is scattered in all directions by
-                                    all the gases and particles in the air. Blue light is scattered more than
-                                    the other colors because it travels as shorter, smaller waves. This is why
-                                    we see a blue sky most of the time.
+                                    <Accordion icon={<MdOutlineDesignServices/>} title="Outros">
+                                      <SkillBar skills={skillsOutros} colors={colors} height={30} />
                                     </Accordion>
-                                
                                 </Wrapper>
                             </FlexLg>
 

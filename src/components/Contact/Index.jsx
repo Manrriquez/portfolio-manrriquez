@@ -1,12 +1,41 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Col, Container, Row, StyledSection } from '../../styles/GlobalGrid';
 import { TypographyDescription, TypographyTitle } from '../../styles/GlobalTypography';
 import { Box, ButtonPrimary} from '../../styles/GlobalComponents';
-import { BoxForm, COlForm, COlMdForm, InputContact, LabelContact, StyledForm, TextareaContact} from './Styled';
+import { BoxFLex, BoxForm, COlForm, COlMdForm, InputContact, LabelContact, StyledForm, TextareaContact} from './Styled';
+
+import emailjs from 'emailjs-com';
+import { toast } from 'react-toastify';
 
 
 
 const Contact = () => {
+
+    const form = useRef();
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs
+          .sendForm(
+            "service_6zkf28d",
+            "template_bdxgdqj",
+            form.current,
+            "j8bW15sy9vE5yMDmW"
+          )
+          .then(
+            (result) => {
+                toast.success("E-mail enviado com sucesso!");
+                 console.log(result.text);
+            },
+            (error) => {
+              console.log(error.text);
+              toast.error("Email invalido, tente novamente!");
+            }
+          );
+      };
+
+      
+    
 
 
   return (
@@ -21,31 +50,33 @@ const Contact = () => {
                     <Row>
                         <Col>
                             <BoxForm>
-                                <StyledForm action='#'>
+                                <StyledForm ref={form} onSubmit={sendEmail}>
 
                                     <Row>
-                                        <COlMdForm>
-                                            <LabelContact>Nome</LabelContact>
-                                            <InputContact  placeholder='nome'/>
-                                        </COlMdForm>
+                                        <BoxFLex>
+                                            <COlMdForm>
+                                                <LabelContact>Nome</LabelContact>
+                                                <InputContact  placeholder='Fulano Silva' name="name" id="name" />
+                                            </COlMdForm>
 
-                                        <COlMdForm>
-                                            <LabelContact>E-mail</LabelContact>
-                                            <InputContact  placeholder='fulano@gmail.com'/>
-                                        </COlMdForm>
+                                            <COlMdForm>
+                                                <LabelContact>E-mail</LabelContact>
+                                                <InputContact  placeholder='fulano@gmail.com' type="email" id="email" name="email"/>
+                                            </COlMdForm>
+                                        </BoxFLex>
 
                                         <COlForm>
                                             <LabelContact>Titulo</LabelContact>
-                                            <InputContact  placeholder='Titulo de assunto'/>
+                                            <InputContact placeholder='Titulo de assunto' name="subject" id="subject" type="text"/>
                                         </COlForm>
 
                                         <COlForm>
                                             <LabelContact>Mensagem</LabelContact>
-                                            <TextareaContact cols={40} rows={10} />
+                                            <TextareaContact name="message" id="message" cols={40} rows={10} />
                                         </COlForm>
                                     </Row>
 
-                                    <ButtonPrimary width="100%">ENVIAR</ButtonPrimary>
+                                    <ButtonPrimary width="100%" type="submit" value="Send">ENVIAR</ButtonPrimary>
                                 </StyledForm>
                             </BoxForm>
                         </Col>

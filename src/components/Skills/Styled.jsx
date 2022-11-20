@@ -41,7 +41,7 @@ const AccordionConjuntTitleAndIcon = styled.h4`
 const ProgressTitle = styled.h5`
     font-weight: 700;
     color: #393536;
-    font-size: clamp(16px, 3vw, 18px);
+    font-size: 15px;
 `;
 
 const AccordionTitle = styled.div`

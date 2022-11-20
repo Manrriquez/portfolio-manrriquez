@@ -75,3 +75,13 @@ h2.rect-progress-bar-percent {
     margin-left: 20px!important;
     font-size: clamp(18px, 3vw, 20px);
 }
+
+.skillbar {
+  background-color: #fca61f5e!important;
+}
+
+.skillbar-percent {
+  font-size: 14px!important;
+  font-weight: 700;
+  color: #FCA61F!important;
+}
