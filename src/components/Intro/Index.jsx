@@ -1,13 +1,13 @@
 import React from 'react'
-import { ButtonPrimary } from '../../styles/GlobalComponents';
-import { Col, Container, Row, StyledSection } from '../../styles/GlobalGrid';
+import { ButtonPrimary } from '../../assets/styles/GlobalComponents';
+import { Col, Container, Row, StyledSection } from '../../assets/styles/GlobalGrid';
 import {HomeDescription, HomeSubtitle, HomeTitle, BackgroundFound, IconAnimatedJava,
      IconAnimatedHttps, IconAnimatedApp, IconAnimatedMysql } from './Styled';
-import PersonalHome from '../../img/IMAGE-HOME.png'
-import IconJava from '../../img/JavaIcon.png'
-import IconHttps from '../../img/HttpsIcon.png'
-import IconApp from '../../img/AppIcon.png'
-import IconMysql from '../../img/MySqlIcon.png'
+import PersonalHome from '../../assets/img/IMAGE-HOME.png'
+import IconJava from '../../assets/img/JavaIcon.png'
+import IconHttps from '../../assets/img/HttpsIcon.png'
+import IconApp from '../../assets/img/AppIcon.png'
+import IconMysql from '../../assets/img/MySqlIcon.png'
 
 
 
@@ -24,7 +24,7 @@ const Intro = () => {
                             Desenvolvedor Full Stack com foco em back-end, sempre em busca de conhecimento, acreditando que sempre há o que melhorar e refatorar seu codigo.
                         </HomeDescription>
                         <br />
-                        <ButtonPrimary>ENTRE EM CONTATO</ButtonPrimary>
+                        <ButtonPrimary href="#contact">ENTRE EM CONTATO</ButtonPrimary>
                     </div>
                 </Col>
                 <Col size="clamp(10rem, 3vw, 14rem)">

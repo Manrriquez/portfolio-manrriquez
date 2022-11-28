@@ -1,8 +1,8 @@
 import React from 'react'
 import {FlexItems, NavbarBrand, NavbarLinkItem, NavbarList, NavbarListItem, NavbarLogo, StyledNavbar } from './Styled'
-import Logotype from '../../img/logotype.svg';
-import { Container } from '../../styles/GlobalGrid';
-import { ButtonPrimary } from '../../styles/GlobalComponents';
+import Logotype from '../../assets/img/logotype.svg';
+import { Container } from '../../assets/styles/GlobalGrid';
+import { ButtonPrimary } from '../../assets/styles/GlobalComponents';
 
 
 const Navbar = () => {
@@ -22,18 +22,18 @@ const Navbar = () => {
                     </NavbarListItem>
 
                     <NavbarListItem>
-                      <NavbarLinkItem href="#">Timeline</NavbarLinkItem>
+                      <NavbarLinkItem href="#timeline">Timeline</NavbarLinkItem>
                     </NavbarListItem>
 
                     <NavbarListItem>
-                      <NavbarLinkItem href="#">Projetos</NavbarLinkItem>
+                      <NavbarLinkItem href="#projects">Projetos</NavbarLinkItem>
                     </NavbarListItem>
 
                     <NavbarListItem>
-                      <NavbarLinkItem href="#">Skills</NavbarLinkItem>
+                      <NavbarLinkItem href="#skills">Skills</NavbarLinkItem>
                     </NavbarListItem>
 
-                    <ButtonPrimary left="25px" size="250px">Contato</ButtonPrimary>
+                    <ButtonPrimary href="#contact" left="25px" size="250px">Contato</ButtonPrimary>
 
                 </NavbarList>
 

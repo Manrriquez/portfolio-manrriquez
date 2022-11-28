@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { Col, Container, Row, StyledSection } from '../../styles/GlobalGrid';
-import { TypographyDescription, TypographyTitle } from '../../styles/GlobalTypography';
-import { Box, ButtonPrimary} from '../../styles/GlobalComponents';
+import React, {useRef } from 'react'
+import { Col, Container, Row, StyledSection } from '../../assets/styles/GlobalGrid';
+import { TypographyDescription, TypographyTitle } from '../../assets/styles/GlobalTypography';
+import { Box, ButtonPrimary} from '../../assets/styles/GlobalComponents';
 import { BoxFLex, BoxForm, COlForm, COlMdForm, InputContact, LabelContact, StyledForm, TextareaContact} from './Styled';
 
 import emailjs from 'emailjs-com';
@@ -35,11 +35,8 @@ const Contact = () => {
       };
 
       
-    
-
-
   return (
-    <StyledSection>
+    <StyledSection id="contact">
         <Container>
             <Row>
                 <Col size='10rem'>

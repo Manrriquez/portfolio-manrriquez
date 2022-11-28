@@ -1,7 +1,7 @@
 import React from 'react'
-import { Col, Container, Row, StyledSection } from '../../styles/GlobalGrid';
+import { Col, Container, Row, StyledSection } from '../../assets/styles/GlobalGrid';
 import {Bloco, Box, BoxBanner, ButtonSecondary, CardBanner, ContactImage, FlexLg, TypographyBanner} from './Styled';
-import ImageContact from '../../img/contato.png'
+import ImageContact from '../../assets/img/contato.png'
 
 
 const Banner = () => {

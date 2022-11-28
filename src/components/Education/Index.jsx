@@ -1,7 +1,7 @@
 import React from 'react'
-import { Col, Container, Row, StyledSection } from '../../styles/GlobalGrid';
-import { TypographyDescription, TypographyTitle } from '../../styles/GlobalTypography';
-import { Box} from '../../styles/GlobalComponents';
+import { Col, Container, Row, StyledSection } from '../../assets/styles/GlobalGrid';
+import { TypographyDescription, TypographyTitle } from '../../assets/styles/GlobalTypography';
+import { Box} from '../../assets/styles/GlobalComponents';
 import {BoxEducation, BoxTimeline, FlexLg, TextEducation} from './Styled';
 import { Chrono } from 'react-chrono';
 import { BsBag, BsBook} from 'react-icons/bs'
@@ -54,7 +54,7 @@ const items = [
 const Education = () => {
     
   return (
-    <StyledSection>
+    <StyledSection id="timeline">
         <Container>
             <Row>
                 <Col size='10rem'>

@@ -1,10 +1,12 @@
 import React from 'react'
-import { Col, Container, Row, StyledSection } from '../../styles/GlobalGrid';
+import { Col, Container, Row, StyledSection } from '../../assets/styles/GlobalGrid';
 import { BoxFlex, BoxItem, DescriptionText, ImageJob, NumberCounterText, TextCounterDescription } from './styled';
-import JobImage from '../../img/ImageJob.png'
-import { TypographyDescription, TypographyTitle } from '../../styles/GlobalTypography';
-import { Box, ButtonPrimary } from '../../styles/GlobalComponents';
+import JobImage from '../../assets/img/ImageJob.png'
+import { TypographyDescription, TypographyTitle } from '../../assets/styles/GlobalTypography';
+import { Box, ButtonPrimary } from '../../assets/styles/GlobalComponents';
 import CountUp from 'react-countup';
+import Curriculum from '../../assets/files/CV.pdf';
+import DownloadLink from 'react-download-link';
 
 
 
@@ -48,9 +50,12 @@ const About = () => {
                                         <TextCounterDescription>Projetos <br /> Finalizados</TextCounterDescription>
                                     </BoxItem>
                                 </BoxFlex>
+
                                 <BoxFlex>
-                                     <ButtonPrimary width="80%">BAIXAR CV</ButtonPrimary>
+                                    <DownloadLink label="BAIXAR CV" className="btn-pdf"
+                                     filename="CV.pdf" exportFile={() => Curriculum} />
                                 </BoxFlex>
+
                             </BoxItem>
                         </Col>
                     </Row>

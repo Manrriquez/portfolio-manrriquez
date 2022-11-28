@@ -10,7 +10,7 @@ import Intro from '../../components/Intro/Index';
 import Navbar from '../../components/Navbar/Index';
 import Projectx from '../../components/Projects/Index';
 import Skills from '../../components/Skills/Index';
-import GlobalStyled from '../../styles/GlobalStyled';
+import GlobalStyled from '../../assets/styles/GlobalStyled';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -20,9 +20,11 @@ const Home = () => {
   return (
     <>
         <ToastContainer />
+        
       <GlobalStyled />
+
         <Navbar  />
-        <ButtonWhatsApp />
+
         <main>
           <Intro />
           <About />
@@ -32,6 +34,9 @@ const Home = () => {
           <Projectx />
           <Contact />
         </main>        
+
+        <ButtonWhatsApp />
+
         <Footer />
     </>
   )

@@ -1,7 +1,7 @@
 import React from 'react'
-import { Col, Container, Row, StyledSection } from '../../styles/GlobalGrid';
-import { TypographyDescription, TypographyTitle } from '../../styles/GlobalTypography';
-import { Box} from '../../styles/GlobalComponents';
+import { Col, Container, Row, StyledSection } from '../../assets/styles/GlobalGrid';
+import { TypographyDescription, TypographyTitle } from '../../assets/styles/GlobalTypography';
+import { Box} from '../../assets/styles/GlobalComponents';
 import { AccordionBox, AccordionConjuntTitleAndIcon, AccordionContent, AccordionItem, AccordionTitle, AccordionWrapper, FlexLg, ProgressTitle, Wrapper } from './Styled';
 import SkillBar from 'react-skillbars';
 import {BsCodeSlash} from 'react-icons/bs'
@@ -82,7 +82,7 @@ const Accordion = ({ title, children, icon }) => {
 const Skills = () => {
     
   return (
-    <StyledSection>
+    <StyledSection id="skills">
         <Container>
             <Row>
                 <Col size='10rem'>

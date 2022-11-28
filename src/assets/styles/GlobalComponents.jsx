@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 
-const ButtonPrimary = styled.button`
+const ButtonPrimary = styled.a`
 
     background: linear-gradient(180deg, #fdc50f 26.71%, #fb982f 99.36%);
     box-shadow: 0px 20px 24px 3px rgba(251, 161, 40, 0.42);
@@ -14,11 +14,14 @@ const ButtonPrimary = styled.button`
     margin-left: ${props => props.left};
     transition: 0.4s;
     padding: 11px 26px 11px 26px;
+    text-align: center;
   
-  &:hover {
-    background: white;
-    border: 1px solid #FCA61F;
-    color: #FCA61F;
+    &:hover {
+      background: white;
+      border: 1px solid #FCA61F;
+      color: #FCA61F;
+    }
+
   }
 
   @media (max-width: 768px) {

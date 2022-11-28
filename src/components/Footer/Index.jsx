@@ -1,10 +1,10 @@
 import React from 'react'
-import BackgroundFooter from '../../img/background-footer.png'
-import { Col, Container, Row } from '../../styles/GlobalGrid';
+import BackgroundFooter from '../../assets/img/background-footer.png'
+import { Col, Container, Row } from '../../assets/styles/GlobalGrid';
 import { FlexItems, IconSocial, LinkSocial, StyledFooter, TypographyFooter } from './Styled';
-import IconInstagram from '../../img/insta.svg';
-import IconFacebook from '../../img/face.svg';
-import IconGithub from '../../img/github.svg';
+import IconInstagram from '../../assets/img/insta.svg';
+import IconFacebook from '../../assets/img/face.svg';
+import IconGithub from '../../assets/img/github.svg';
 
 
 
