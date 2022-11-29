@@ -52,8 +52,12 @@ const About = () => {
                                 </BoxFlex>
 
                                 <BoxFlex>
-                                    <DownloadLink label="BAIXAR CV" className="btn-pdf"
-                                     filename="CV.pdf" exportFile={() => Curriculum} />
+                                    {/* <DownloadLink label="BAIXAR CV" className="btn-pdf"
+                                     filename="CV.pdf" exportFile={() => Curriculum} /> */}
+
+                                     <a href={Curriculum} download="CV" target='_blank'>
+                                        <ButtonPrimary size="100%">BAIXAR CV</ButtonPrimary>
+                                     </a>
                                 </BoxFlex>
 
                             </BoxItem>
