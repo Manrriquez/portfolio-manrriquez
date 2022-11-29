@@ -6,7 +6,6 @@ import { TypographyDescription, TypographyTitle } from '../../assets/styles/Glob
 import { Box, ButtonPrimary } from '../../assets/styles/GlobalComponents';
 import CountUp from 'react-countup';
 import Curriculum from '../../assets/files/CV.pdf';
-import DownloadLink from 'react-download-link';
 
 
 
@@ -52,8 +51,6 @@ const About = () => {
                                 </BoxFlex>
 
                                 <BoxFlex>
-                                    {/* <DownloadLink label="BAIXAR CV" className="btn-pdf"
-                                     filename="CV.pdf" exportFile={() => Curriculum} /> */}
 
                                      <a href={Curriculum} download="CV" target='_blank'>
                                         <ButtonPrimary size="100%">BAIXAR CV</ButtonPrimary>

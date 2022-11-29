@@ -1,8 +1,8 @@
-import React, {useRef, useState} from 'react'
+import React, { useState} from 'react'
 import { Col, Container, Row, StyledSection } from '../../assets/styles/GlobalGrid';
 import { TypographyDescription, TypographyTitle } from '../../assets/styles/GlobalTypography';
 import { Box, ButtonPrimary} from '../../assets/styles/GlobalComponents';
-import { BoxFLex, BoxForm, ButtonDisabled, COlForm, COlMdForm, ErrorMessage, InputContact, LabelContact, LoadingSpinner, StyledForm, TextareaContact} from './Styled';
+import { BoxFLex, BoxForm, ButtonDisabled, COlForm, COlMdForm, InputContact, LabelContact, StyledForm, TextareaContact} from './Styled';
 import emailjs from 'emailjs-com';
 import { toast } from 'react-toastify';
 
