@@ -33,7 +33,9 @@ const Navbar = () => {
                       <NavbarLinkItem href="#skills">Skills</NavbarLinkItem>
                     </NavbarListItem>
 
-                    <ButtonPrimary href="#contact" left="25px" size="250px">Contato</ButtonPrimary>
+                  <a href="#contact">
+                    <ButtonPrimary left="25px" size="250px">Contato</ButtonPrimary>
+                  </a>
 
                 </NavbarList>
 

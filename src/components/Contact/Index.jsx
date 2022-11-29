@@ -9,7 +9,10 @@ import { toast } from 'react-toastify';
 
 
 
+
 const Contact = () => {
+
+    
 
     const form = useRef();
     const sendEmail = (e) => {

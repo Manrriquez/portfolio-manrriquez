@@ -24,7 +24,9 @@ const Banner = () => {
                                    maestria, ninguem nasce sabendo de tudo, tudo se aprende e se aprimora, como dizem por ai <strong>"todo sênior já foi um junior"</strong>, 
                                    dito isto, clique no botão abaixo e vamos bater um papo!
                                 </TypographyBanner>
-                                <ButtonSecondary>ENTRE EM CONTATO</ButtonSecondary>
+                                <a href="#contact">
+                                    <ButtonSecondary>ENTRE EM CONTATO</ButtonSecondary>
+                                </a>
                             </BoxBanner>
                             <BoxBanner>
                                 <ContactImage src={ImageContact} />

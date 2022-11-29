@@ -31,6 +31,19 @@ const DescriptionProject = styled.p`
     }
 `;
 
+const DescriptionProjectStatus = styled.h5`
+    max-width: 500px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    margin-top: 15px;
+    color: #FCA61F;
+    text-align: initial;
+
+    @media (max-width: 792px) {
+        text-align: center;
+    }
+`;
+
 const Bloco = styled.div`
     width: 600px;
     height: 300px;
@@ -48,4 +61,4 @@ const Bloco = styled.div`
     }
 `;
 
-export {FlexLg, Bloco, BoxProject, DescriptionProject};
+export {FlexLg, Bloco, BoxProject, DescriptionProject,DescriptionProjectStatus};
