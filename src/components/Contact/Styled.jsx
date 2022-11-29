@@ -1,5 +1,20 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
+const AnimationLoading = keyframes`
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+`;
+
+const LoadingSpinner = styled.div`
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 7px solid #ffff;
+    border-radius: 50%;
+    border-top-color: #ffff;
+    animation: ${AnimationLoading} 1s linear infinite;
+`;
 
 const BoxForm = styled.div`
     max-width: 750px;
@@ -31,6 +46,28 @@ const COlMdForm = styled.div`
     @media (max-width: 768px) {
         width: 100%;
     }
+`;
+const ButtonDisabled= styled.div`
+
+    box-shadow: 0px 20px 24px 3px rgba(251, 161, 40, 0.42);
+    border-radius: 18px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    width: ${props => props.width};
+    padding: 11px 30px 11px 30px;
+    text-align: center;
+  
+    background: white;
+    border: 1px solid #FCA61F;
+    color: #FCA61F;
+
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+  
 `;
 
 const BoxFLex = styled.div`
@@ -70,6 +107,11 @@ const InputContact = styled.input`
 
 `;
 
+const ErrorMessage = styled.span`
+    color: #FCA61F;
+    font-weight: 600;
+`;
+
 const TextareaContact = styled.textarea`
 
     background: #F7F7F7;
@@ -93,4 +135,4 @@ const TextareaContact = styled.textarea`
 `;
 
 
-export {BoxForm, StyledForm, InputContact, LabelContact, COlMdForm, COlForm, TextareaContact, BoxFLex};
+export {BoxForm, StyledForm, InputContact, LabelContact, COlMdForm, COlForm, TextareaContact, ButtonDisabled, BoxFLex, ErrorMessage, LoadingSpinner};

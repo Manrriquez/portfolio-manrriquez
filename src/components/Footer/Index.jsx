@@ -24,7 +24,7 @@ const Footer = () => {
                     <IconSocial src={IconFacebook} />
                   </LinkSocial>
 
-                  <LinkSocial>
+                  <LinkSocial src="https://github.com/Manrriquez" target="_blank">
                     <IconSocial src={IconGithub} />
                   </LinkSocial>
     

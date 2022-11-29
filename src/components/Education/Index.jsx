@@ -20,8 +20,9 @@ const items = [
       title: "10/2021 Atual",
       cardTitle: "Estagio",
       cardSubtitle: `Desenvolvimento Web Front-end`,
-      cardDetailedText: `Estagiario Front-end na empresa PillBiz AG, tendo a principio demandas como manuntenção e a criação de ladingpages & blogs & sistemas web,
-      assim após 4 meses de tendo promoção como Desenvolvedor Front-end Junior, participando ativamente no desenvolvimento front-end, tecnologias utilizadas React + NodeJS + SASS + BOOSTRAP 5 + STYLED-COMPONENTS`
+      cardDetailedText: `Estagiario Front-end na empresa PillBiz AG, responsavel pelo desenvolvimento e manuntenção de sistemas web,
+       ladingpages e blogs, procurando agilizar processos de desenvolvimento e boas praticas, utilizando as tecnologias ReactJS,
+        Node, Styled-Components, SASS, Bootstrap 5, seguindo a risca o uso de boas praticas e foco.`
     },
     {
       title: "04/2021 até 12/2023",

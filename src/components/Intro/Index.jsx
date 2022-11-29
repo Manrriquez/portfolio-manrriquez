@@ -24,7 +24,9 @@ const Intro = () => {
                             Desenvolvedor Full Stack com foco em back-end, sempre em busca de conhecimento, acreditando que sempre há o que melhorar e refatorar seu codigo.
                         </HomeDescription>
                         <br />
-                        <ButtonPrimary href="#contact">ENTRE EM CONTATO</ButtonPrimary>
+                        <a href="#contact">
+                            <ButtonPrimary>ENTRE EM CONTATO</ButtonPrimary>
+                        </a>
                     </div>
                 </Col>
                 <Col size="clamp(10rem, 3vw, 14rem)">
