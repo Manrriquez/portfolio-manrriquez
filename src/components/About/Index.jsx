@@ -52,8 +52,8 @@ const About = () => {
 
                                 <BoxFlex>
 
-                                     <a href={Curriculum} download="CV" target='_blank'>
-                                        <ButtonPrimary size="100%">BAIXAR CV</ButtonPrimary>
+                                     <a href={Curriculum} download="CV" target='_blank' style={{width: "100%"}}>
+                                        <ButtonPrimary width="100%">BAIXAR CV</ButtonPrimary>
                                      </a>
                                 </BoxFlex>
 
