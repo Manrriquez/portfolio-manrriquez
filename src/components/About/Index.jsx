@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Col, Container, Row, StyledSection } from '../../assets/styles/GlobalGrid';
 import { BoxFlex, BoxItem, DescriptionText, ImageJob, NumberCounterText, TextCounterDescription } from './styled';
 import JobImage from '../../assets/img/ImageJob.png'
@@ -10,6 +10,18 @@ import Curriculum from '../../assets/files/CV.pdf';
 
 
 const About = () => {
+
+    const [counter, setCounter] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+        setCounter((counter) => counter + 1);
+        }, 1000);
+
+        return () => {
+            clearInterval(interval);
+        };
+    }, []);
     
   return (
     <StyledSection id="about">
@@ -37,14 +49,14 @@ const About = () => {
                                 <BoxFlex>
                                     <BoxItem>
                                         <NumberCounterText>
-                                            <CountUp end={1} durantion="200" />+
+                                            1+
                                         </NumberCounterText>
                                         <TextCounterDescription>Ano <br /> de experiência</TextCounterDescription>
                                     </BoxItem>
 
                                     <BoxItem>
                                         <NumberCounterText>
-                                            <CountUp end={15} durantion="200" />+
+                                            <CountUp end={13} duration={14.75} />+
                                         </NumberCounterText>
                                         <TextCounterDescription>Projetos <br /> Finalizados</TextCounterDescription>
                                     </BoxItem>

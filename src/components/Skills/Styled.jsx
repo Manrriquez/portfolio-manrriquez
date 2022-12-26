@@ -54,6 +54,7 @@ const AccordionTitle = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: 0.6s;
 
     box-shadow: 0px 20px 24px 3px rgba(255, 186, 94, 0.24);;
 
@@ -82,8 +83,7 @@ const FlexLg = styled.div`
     margin-bottom: 0.5rem;
 
     @media (min-width: 992px) {
-    display: flex;
-
+        display: flex;
     }
 `;
 

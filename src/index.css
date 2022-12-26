@@ -13,12 +13,14 @@ html {
     border-bottom: 5px solid;
 }
 
-
+/* 
 .timelinestyle__TimelineControlContainer-sc-cif21b-4.inTALd {
     display: none;
+} */
+
+ul.timeline-controls.rc-controls {
+  display: none;
 }
-
-
 
 .swiper-slide-active {
     background: white !important;

@@ -41,9 +41,6 @@ const Contact = () => {
         }
     }
 
-
-
-      
   return (
     <StyledSection id="contact">
         <Container>
@@ -66,7 +63,6 @@ const Contact = () => {
                                                 <LabelContact>Nome</LabelContact>
                                                 <InputContact value={dados.name} onChange={e => setDados({...dados, name: e.target.value})}
                                                  placeholder='Nome' name="name" id="name" minLength="10" required/>
-                                               
                                             </COlMdForm>
 
                                             <COlMdForm>

@@ -85,9 +85,13 @@ const AnimatedImageBanner = keyframes`
 
 
 const ContactImage = styled.img`
-    width: 300;
+    width: 100%;
 
     animation: ${AnimatedImageBanner} 8s linear 0s infinite;
+
+    @media (max-width: 768px) {
+      width: 300px!important;
+    }
 `;
 
 export {CardBanner, FlexLg,BoxBanner, ContactImage, TypographyBanner, ButtonSecondary};

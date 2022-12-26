@@ -1,14 +1,72 @@
 import React from 'react'
 import { ButtonPrimary } from '../../assets/styles/GlobalComponents';
 import { Col, Container, Row, StyledSection } from '../../assets/styles/GlobalGrid';
-import {HomeDescription, HomeSubtitle, HomeTitle, BackgroundFound, IconAnimatedJava,
-     IconAnimatedHttps, IconAnimatedApp, IconAnimatedMysql } from './Styled';
+import {HomeDescription, HomeSubtitle, HomeTitle, BackgroundFound, IconAnimated} from './Styled';
 import PersonalHome from '../../assets/img/IMAGE-HOME.png'
 import IconJava from '../../assets/img/JavaIcon.png'
 import IconHttps from '../../assets/img/HttpsIcon.png'
 import IconApp from '../../assets/img/AppIcon.png'
 import IconMysql from '../../assets/img/MySqlIcon.png'
+import { keyframes } from 'styled-components';
 
+
+const AnimatedIcon = keyframes`
+
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70% {
+		transform: translateY(-8px);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: translateY(8px);
+	}
+
+	80% {
+		transform: translateY(6.4px);
+	}
+
+	90% {
+		transform: translateY(-6.4px);
+	}
+`;
+
+const AnimatedIcon1 = keyframes`
+
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70% {
+		transform: translateY(8px);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: translateY(-8px);
+	}
+
+	80% {
+		transform: translateY(-6.4px);
+	}
+
+	90% {
+		transform: translateY(6.4px);
+	}
+`;
 
 
 const Intro = () => {
@@ -32,10 +90,10 @@ const Intro = () => {
                 <Col size="clamp(10rem, 3vw, 14rem)">
                     <div>
                         <BackgroundFound url={PersonalHome}>
-                            <IconAnimatedJava src={IconJava}/>
-                            <IconAnimatedHttps src={IconHttps}/>
-                            <IconAnimatedApp src={IconApp}/>
-                            <IconAnimatedMysql src={IconMysql}/>
+                            <IconAnimated top="50px" height="60px" width="60px" animation={AnimatedIcon} src={IconJava}/>
+                            <IconAnimated bottom="30px" height="60px" width="60px" animation={AnimatedIcon1} src={IconApp}/>
+                            <IconAnimated top="60px" left="20px" height="50px" width="60px" animation={AnimatedIcon} src={IconHttps}/>
+                            <IconAnimated bottom="15px" height="60px" width="60px" animation={AnimatedIcon1} src={IconMysql}/>
                         </BackgroundFound>
                     </div>
                 </Col>

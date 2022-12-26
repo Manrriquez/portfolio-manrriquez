@@ -31,6 +31,8 @@ const BackgroundFound = styled.div`
     background-repeat: no-repeat;
     background-size: 100%;
     height: 20rem;
+	display: flex;
+	justify-content: space-around;
 
 	@media (max-width: 992px) {
 		background-size: contain;
@@ -39,88 +41,16 @@ const BackgroundFound = styled.div`
 	
 `;
 
-const AnimatedIcon = keyframes`
 
-	0%,
-	100% {
-		transform: translateY(0);
-	}
-
-	10%,
-	30%,
-	50%,
-	70% {
-		transform: translateY(-8px);
-	}
-
-	20%,
-	40%,
-	60% {
-		transform: translateY(8px);
-	}
-
-	80% {
-		transform: translateY(6.4px);
-	}
-
-	90% {
-		transform: translateY(-6.4px);
-	}
-`;
-
-
-const IconAnimatedJava = styled.img`
-    width: clamp(55px, 3vw, 70px);
+const IconAnimated = styled.img`
+    width: ${props => props.width};
+	height: ${props => props.height};
 	position: relative;
-    animation: ${AnimatedIcon} 8s linear 0s infinite;
-	left: 50px;
-	top: 75px;
-
-	@media (max-width: 992px) {
-		left: auto;
-		right: 75px;
-	}
-`;
-
-const IconAnimatedApp = styled.img`
-    width: clamp(55px, 3vw, 70px);
-	position: relative;
-	animation: ${AnimatedIcon} 8s linear 0s infinite;
-	left: 35px;
-	bottom: 50px;
-
-	@media (max-width: 992px) {
-		left: auto;
-		right: 55px;
-
-	}
-`;
-
-const IconAnimatedHttps = styled.img`
-    width: clamp(55px, 3vw, 70px);
-	position: relative;
-	animation: ${AnimatedIcon} 8s linear 0s infinite;
-	left: 315px;
-	top: 100px;
-
-	@media (max-width: 992px) {
-		left: 150px;
-	}
-`;
-
-const IconAnimatedMysql = styled.img`
-    width: clamp(55px, 3vw, 70px);
-	position: relative;
-	animation: ${AnimatedIcon} 8s linear 0s infinite;
-	left: 250px;
-	bottom: 30px;
-
-	@media (max-width: 992px) {
-		left: 80px;
-	}
+    animation:  ${props => props.animation} 8s linear 0s infinite;
+	bottom:  ${props => props.bottom};
+	left:  ${props => props.left};
+	top:  ${props => props.top};
 `;
 
 
-
-export {HomeTitle, HomeSubtitle, HomeDescription, BackgroundFound, IconAnimatedJava,
-	 IconAnimatedApp, IconAnimatedHttps, IconAnimatedMysql};
+export {HomeTitle, HomeSubtitle, HomeDescription, BackgroundFound, IconAnimated};

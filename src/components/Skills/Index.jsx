@@ -13,7 +13,8 @@ import {FiDatabase} from 'react-icons/fi'
 const skillsFrontend = [
     { type: 'ReactJS', level: 68 },
     { type: 'VueJS', level: 73 },
-    { type: 'Styled-Components', level: 65 },
+    { type: 'MUI', level: 63 },
+    { type: 'S-C', level: 65 },
     { type: 'Tailwind', level: 85 },
     { type: 'Bootstrap', level: 87 },
     { type: 'SASS', level: 78 },
@@ -36,8 +37,6 @@ const skillsBackend = [
 const skillsDevops = [
     { type: 'Heroku', level: 75 },
     { type: 'AWS', level: 66 },
-    { type: 'Github Actions', level: 66 },
-    { type: 'Azure', level: 60 },
     { type: 'Docker', level: 72 },
 ];
 
