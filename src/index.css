@@ -1,112 +1,70 @@
-html {
-  scroll-behavior: smooth;
-}
-.accordion-item.collapsed{
-    max-height: 0;
-    transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
-}
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
 
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
 
-.accordion-title.open::after {
-    content: "";
-    border-top: 0;
-    border-bottom: 5px solid;
-}
-
-/* 
-.timelinestyle__TimelineControlContainer-sc-cif21b-4.inTALd {
-    display: none;
-} */
-
-ul.timeline-controls.rc-controls {
-  display: none;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 
-.swiper-slide-active {
-    background: white !important;
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
   }
-
-  
-  .swiper {
-    width: 100%;
-    height: 100%;
+  a:hover {
+    color: #747bff;
   }
-  
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-  
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
+  button {
+    background-color: #f9f9f9;
   }
-  
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .mySwiper {
-    width: 100vh;
-    min-width: 100%;
-    max-width: 100%;
-  }
-
-
-
-  .swiper-button-next, .swiper-button-prev {
-    color: orange!important;
-  }
-
-
-h2.rect-progress-bar-percent {
-    margin: 1px!important;
-    margin-left: 20px!important;
-    font-size: clamp(18px, 3vw, 20px);
-}
-
-.skillbar {
-  background-color: #fca61f5e!important;
-}
-
-.skillbar-percent {
-  font-size: 14px!important;
-  font-weight: 700;
-  color: #FCA61F!important;
-}
-
-
-
-.btn-pdf {
-  background: linear-gradient(180deg, #fdc50f 26.71%, #fb982f 99.36%)!important;
-  box-shadow: 0px 20px 24px 3px rgba(251, 161, 40, 0.42)!important;
-  border-radius: 18px!important;
-  border: none!important;
-  color: white!important;
-  font-weight: 600!important;
-  font-size: 16px!important;
-  width: 100%!important;
-  transition: 0.4s!important;
-  padding: 11px 26px 11px 26px!important;
-  text-align: center!important;
-  text-decoration: none!important;
-}
-
-.btn-pdf:hover {
-  background: white!important;
-  border: 1px solid #FCA61F!important;
-  color: #FCA61F!important;
 }
