@@ -25,7 +25,7 @@ const Banner = () => {
                                    dito isto, clique no botão abaixo e vamos bater um papo!
                                 </TypographyBanner>
                                 <a href="#contact">
-                                    <ButtonSecondary>ENTRE EM CONTATO</ButtonSecondary>
+                                    <ButtonSecondary>ENTRAR EM CONTATO</ButtonSecondary>
                                 </a>
                             </BoxBanner>
                             <BoxBanner>
