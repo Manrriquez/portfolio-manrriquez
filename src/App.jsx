@@ -10,6 +10,7 @@ import Footer from './components/Footer/Index'
 import Intro from './components/Intro/Index'
 import Navbar from './components/Navbar/Index'
 import Projects from './components/Projects/Index'
+import Service from './components/Services/Index'
 import Skills from './components/Skills/Index'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
 
       <main>
           <Intro />
+          <Service />
           <About />
           <Education />
           <Banner />

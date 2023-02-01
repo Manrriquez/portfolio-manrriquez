@@ -11,7 +11,6 @@ const FlexLg = styled.div`
         display: flex;
         gap: 1.5rem;
         align-items: center;
-
     }
 `;
 
@@ -60,5 +59,21 @@ const Bloco = styled.div`
         width: 100%;
     }
 `;
+const CardSlider = styled.div`
+    background-color: transparent;
+    border-radius: 12px;
+    padding: 15px 20px 35px 20px;
 
-export {FlexLg, Bloco, BoxProject, DescriptionProject,DescriptionProjectStatus};
+    @media (max-width: 992px) {
+        padding: 10px 10px 35px 10px;
+    }
+`;
+
+const CardSliderImage = styled.img`
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+`;
+
+
+export {FlexLg, Bloco, BoxProject, DescriptionProject,DescriptionProjectStatus, CardSlider, CardSliderImage};

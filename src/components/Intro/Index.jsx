@@ -8,7 +8,6 @@ import IconHttps from '../../assets/img/HttpsIcon.png'
 import IconApp from '../../assets/img/AppIcon.png'
 import IconMysql from '../../assets/img/MySqlIcon.png'
 import { keyframes } from 'styled-components';
-import SpinnerRoundedAnimation from '../SpinnerRoundedAnimation/Index';
 
 
 const AnimatedIcon = keyframes`
@@ -89,8 +88,13 @@ const Intro = () => {
                     </div>
                 </Col>
                 <Col size="clamp(10rem, 3vw, 14rem)">
-                    <div>
-                        <SpinnerRoundedAnimation />
+					<div>
+                        <BackgroundFound url={PersonalHome}>
+                            <IconAnimated top="50px" height="60px" width="60px" animation={AnimatedIcon} src={IconJava}/>
+                            <IconAnimated bottom="30px" height="60px" width="60px" animation={AnimatedIcon1} src={IconApp}/>
+                            <IconAnimated top="60px" left="20px" height="50px" width="60px" animation={AnimatedIcon} src={IconHttps}/>
+                            <IconAnimated bottom="15px" height="60px" width="60px" animation={AnimatedIcon1} src={IconMysql}/>
+                        </BackgroundFound>
                     </div>
                 </Col>
             </Row>

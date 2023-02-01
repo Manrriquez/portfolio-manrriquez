@@ -2,11 +2,12 @@ import React from 'react'
 import { Col, Container, Row, StyledSection } from '../../assets/styles/GlobalGrid';
 import { TypographyDescription, TypographyTitle } from '../../assets/styles/GlobalTypography';
 import { Box, ButtonPrimary} from '../../assets/styles/GlobalComponents';
-import {Bloco, BoxProject, DescriptionProject, DescriptionProjectStatus, FlexLg} from './Styled';
+import {Bloco, BoxProject, CardSlider, CardSliderImage, DescriptionProject, DescriptionProjectStatus, FlexLg} from './Styled';
 import BackgroundDsMeta from '../../assets/img/DSMETA.png';
 import BackgroundEstudadev from '../../assets/img/estudadev.png'
 import BackgroundApiRest from '../../assets/img/api-restfull.png'
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
+import { BsGithub, BsLink } from 'react-icons/bs';
 
 
 const ProjectInfo = [
@@ -41,7 +42,7 @@ const Projects = () => {
         fixedWidth : '100%',
         type   : 'loop',
         padding: '20%',
-        fixedHeight: '8rem',
+        arrows: false,
         width : 1100,
         autoplay     : true,
         pauseOnHover : false,
@@ -51,7 +52,6 @@ const Projects = () => {
                 perPage: 1,
             },
       },
-        height       : '15rem',
       };
 
   return (
@@ -68,32 +68,22 @@ const Projects = () => {
                     <Row>
                         <Col>
                         
-                            <Splide
-                                options={ options }
-                                aria-labelledby="autoplay-example-heading"
-                                hasTrack={ false }
-                            >
+                            <Splide options={ options } aria-labelledby="autoplay-example-heading" hasTrack={ false }>
                                 <div style={ { position: 'relative' } }>
                                 <SplideTrack>
                                     <SplideSlide>
-                                        <div style={{backgroundColor: 'black', paddingLeft: '20px', paddingRight: '20px'}}>
-                                            <img src={BackgroundDsMeta} alt="" />
-                                        </div>
-                                        <div style={{backgroundColor: 'black', paddingLeft: '20px', paddingRight: '20px'}}>
-                                            <img src={BackgroundDsMeta} alt="" />
-                                        </div>
-                                        <div style={{backgroundColor: 'black', paddingLeft: '20px', paddingRight: '20px'}}>
-                                            <img src={BackgroundDsMeta} alt="" />
-                                        </div>
-                                        <div style={{backgroundColor: 'black', paddingLeft: '20px', paddingRight: '20px'}}>
-                                            <img src={BackgroundDsMeta} alt="" />
-                                        </div>
+                                        <CardSlider>
+                                            <CardSliderImage src={BackgroundDsMeta} alt="" />
+                                            <p>Lorem ipsum amet lit.</p>
+                                            <p>Lorem ipsum amet lit.</p>
+                                            <BsLink />
+                                            <BsGithub />
+                                            <ButtonPrimary>
+                                                <BsGithub />
+                                            </ButtonPrimary>
+                                        </CardSlider>
                                     </SplideSlide>
                                 </SplideTrack>
-                                </div>
-
-                                <div className="splide__progress">
-                                <div className="splide__progress__bar" />
                                 </div>
                             </Splide>
                         </Col>

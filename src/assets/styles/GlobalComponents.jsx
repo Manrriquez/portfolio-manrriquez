@@ -12,7 +12,7 @@ const ButtonPrimary = styled.button`
     font-size: 16px;
     width: ${props => props.width};
     margin-left: ${props => props.left};
-    transition: 0.4s;
+    transition: 0.6s;
     padding: 11px 30px 11px 30px;
     text-align: center;
 

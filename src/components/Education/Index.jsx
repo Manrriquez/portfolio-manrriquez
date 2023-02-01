@@ -70,15 +70,8 @@ const Education = () => {
                         <Col size="5rem">
 
                             <BoxEducation>
-                               <TextEducation>
-                                    <BsBook />
-                                    Educação
-                                </TextEducation>
-
-                                <TextEducation>
-                                    <BsBag />
-                                    Carreira
-                              </TextEducation>
+                               <TextEducation> <BsBook /> Educação </TextEducation>
+                                <TextEducation> <BsBag /> Carreira </TextEducation>
                             </BoxEducation>
 
                             <FlexLg>
