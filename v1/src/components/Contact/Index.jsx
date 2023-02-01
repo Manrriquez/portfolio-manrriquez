@@ -5,6 +5,7 @@ import { Box, ButtonPrimary} from '../../assets/styles/GlobalComponents';
 import { BoxFLex, BoxForm, ButtonDisabled, COlForm, COlMdForm, InputContact, LabelContact, StyledForm, TextareaContact} from './Styled';
 import emailjs from 'emailjs-com';
 import { toast } from 'react-toastify';
+import { BASE_SEND_KEY, BASE_SEND_SERVICE, BASE_SEND_TEMPLATE } from '../config/sendEmail';
 
 const EMAIL_REGEX = new RegExp(
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,6}))$/
@@ -28,7 +29,7 @@ const Contact = () => {
             toast.warning("Preencha os todos os campos corretamente!");
         } else {
           if(EMAIL_REGEX.test(dados.email)) {
-            emailjs.send("service_6zkf28d", "template_bdxgdqj", dados ,"j8bW15sy9vE5yMDmW")
+            emailjs.send(BASE_SEND_SERVICE, BASE_SEND_TEMPLATE, dados ,BASE_SEND_KEY)
             .then((result) => {
               setEmailsuccess(!emailSuccess);
               setDados(initialState);

@@ -28,7 +28,7 @@ const Contact = () => {
             toast.warning("Preencha os todos os campos corretamente!");
         } else {
           if(EMAIL_REGEX.test(dados.email)) {
-            emailjs.send("service_6zkf28d", "template_bdxgdqj", dados ,"j8bW15sy9vE5yMDmW")
+            emailjs.send(SERVICE, "template_bdxgdqj", dados ,"j8bW15sy9vE5yMDmW")
             .then((result) => {
               setEmailsuccess(!emailSuccess);
               setDados(initialState);
