@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Col, Container, Row, StyledSection } from '../../assets/styles/GlobalGrid';
-import { BoxFlex, BoxItem, DescriptionText, ImageJob, NumberCounterText, TextCounterDescription } from './styled';
+import { BoxFlex, BoxItem, DescriptionText, ImageJob, NumberCounterText, Tab, TabContent, Tabs, TextCounterDescription } from './styled';
 import JobImage from '../../assets/img/ImageJob.png'
 import { TypographyDescription, TypographyTitle } from '../../assets/styles/GlobalTypography';
 import { Box, ButtonPrimary } from '../../assets/styles/GlobalComponents';
@@ -11,17 +11,13 @@ import Curriculum from '../../assets/files/CV.pdf';
 
 const About = () => {
 
-    const [counter, setCounter] = useState(0);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-        setCounter((counter) => counter + 1);
-        }, 1000);
-
-        return () => {
-            clearInterval(interval);
-        };
-    }, []);
+    const [active, setActive] = useState(0);
+    const handleClick = e => {
+        const index = parseInt(e.target.id, 0);
+        if (index !== active) {
+        setActive(index);
+        }
+    };
     
   return (
     <StyledSection id="about">
@@ -34,6 +30,35 @@ const About = () => {
                             Uma breve introdução sobre eu, minhas perspectivas de futuro e paixões sobre o mundo tecnologico.
                         </TypographyDescription>
                     </Box>
+                    <Row>
+                        <Col>
+                            <BoxItem>
+                            <Tabs>
+                                <Tab onClick={handleClick} active={active === 0} id={0}>
+                                    Conheça um pouco sobre mim!
+
+                                    Transformar sonhos em realidade com projetos de alta qualidade.
+                                </Tab>
+
+                                <Tab onClick={handleClick} active={active === 1} id={1}>
+                                Content2
+                                </Tab>
+                            </Tabs>
+                            </BoxItem>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <BoxItem>
+                            <TabContent active={active === 0}>
+                                <h1>Content 1</h1>
+                            </TabContent>
+                            <TabContent active={active === 1}>
+                                <h1>Content 2</h1>
+                            </TabContent>
+                            </BoxItem>
+                        </Col>
+                    </Row>
                     <Row>
                         <Col>
                             <ImageJob src={JobImage} />

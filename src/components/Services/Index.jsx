@@ -74,15 +74,16 @@ const Service = () => {
      <StyledSection>
         <Container>
           <Row>
-            <Col size="10rem">
+            <Col size="11rem">
               <BackgroundServiceSvg url={BackgroundServiceImage}>
                 <BoxFlex>
                   <Box>
-                      <TypographyService>Quais serviços eu presto</TypographyService>
-                      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo id facilis natus laboriosam, quae reprehenderit!</p>
+                      <TypographyService>Quais serviços eu ofereço?</TypographyService>
+                      <p style={{fontSize: '16px', fontWeight: 500, color: '#FFFFFFFF', maxWidth: '600px'}}>Estes são alguns serviços que ofereço como programador,
+                       tendo como foco as tecnologias ReactJS, Java, Figma e seus ecossistema.</p>
                   </Box>
                   <BoxFlex gap="25px">
-                    <Box>
+                    <Box top="25px">
                       <CardService animation={AnimatedIcon}>
                         <CardServiceTypography>
                           <BiCodeCurly />
@@ -96,7 +97,7 @@ const Service = () => {
                         </CardServiceTypography>
                       </CardService>
                     </Box>
-                    <Box>
+                    <Box bottom="35px">
                         <CardService animation={AnimatedIcon1}>
                           <CardServiceTypography>
                             <FiDatabase />

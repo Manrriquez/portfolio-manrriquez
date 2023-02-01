@@ -35,6 +35,9 @@ const ButtonPrimary = styled.button`
 const Box = styled.div`
   margin-top: 3rem;
   margin-bottom: 4rem;
+  position: relative;
+  top:  ${props => props.top};
+  bottom:  ${props => props.bottom}
 `;
 
 export {ButtonPrimary, Box};

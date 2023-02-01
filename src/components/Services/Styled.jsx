@@ -24,6 +24,7 @@ const BoxFlex = styled.div`
 const TypographyService = styled.p`
     font-weight: 700;
     color: #FFFFFF;
+    margin-bottom: 3px;
     font-size: clamp(17px, 3vw, 25px);
 `;
 
