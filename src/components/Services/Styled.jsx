@@ -19,13 +19,36 @@ const BoxFlex = styled.div`
     position: relative;
     top: ${props => props.top};
     bottom: ${props => props.bottom};
+
+    @media (max-width: 892px) {
+        justify-content: center;
+	}
 `;
 
-const TypographyService = styled.p`
+const BoxFlexService = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    @media (max-width: 892px) {
+		display: block;
+	}
+`;
+
+const TypographyTitleService = styled.p`
     font-weight: 700;
     color: #FFFFFF;
     margin-bottom: 3px;
     font-size: clamp(17px, 3vw, 25px);
+`;
+
+const TypographyDescriptionService = styled.p`
+    font-size: clamp(14px, 3vw, 17px);
+    font-weight: 500px;
+    color: #FFFFFFFF;
+    max-width: 600px;
+
+    @media (max-width: 892px) {
+		max-width: 100%
+	}
 `;
 
 const CardServiceTypography = styled.p`
@@ -68,4 +91,12 @@ const CardService = styled.div`
     }
 `;
 
-export {BackgroundServiceSvg, CardService, BoxFlex, TypographyService, CardServiceTypography};
+const BoxService = styled.div`
+    margin-top: 35px;
+    @media (max-width: 892px) {
+        margin-top: 15px;
+        text-align: center;
+	}
+`;
+
+export {BackgroundServiceSvg, CardService, BoxFlex, TypographyTitleService, BoxFlexService, CardServiceTypography, BoxService, TypographyDescriptionService};

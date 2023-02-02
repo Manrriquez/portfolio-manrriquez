@@ -1,6 +1,6 @@
 import React from 'react'
 import { Col, Container, Row, StyledSection } from '../../assets/styles/GlobalGrid';
-import { BackgroundServiceSvg, BoxFlex, CardService, CardServiceTypography, TypographyService } from './Styled';
+import { BackgroundServiceSvg, BoxFlex, BoxFlexService, BoxService, CardService, CardServiceTypography, TypographyDescriptionService,TypographyTitleService } from './Styled';
 import BackgroundServiceImage from '../../assets/img/background-geometric.svg'
 import { Box } from '../../assets/styles/GlobalComponents';
 import { keyframes } from 'styled-components';
@@ -76,12 +76,12 @@ const Service = () => {
           <Row>
             <Col size="11rem">
               <BackgroundServiceSvg url={BackgroundServiceImage}>
-                <BoxFlex>
-                  <Box>
-                      <TypographyService>Quais serviços eu ofereço?</TypographyService>
-                      <p style={{fontSize: '16px', fontWeight: 500, color: '#FFFFFFFF', maxWidth: '600px'}}>Estes são alguns serviços que ofereço como programador,
-                       tendo como foco as tecnologias ReactJS, Java, Figma e seus ecossistema.</p>
-                  </Box>
+                <BoxFlexService>
+                  <BoxService>
+                      <TypographyTitleService>Quais serviços eu ofereço?</TypographyTitleService>
+                      <TypographyDescriptionService>Estes são alguns serviços que ofereço como programador,
+                       tendo como foco as tecnologias ReactJS, Java, Figma e seus ecossistema.</TypographyDescriptionService>
+                  </BoxService>
                   <BoxFlex gap="25px">
                     <Box top="25px">
                       <CardService animation={AnimatedIcon}>
@@ -112,7 +112,7 @@ const Service = () => {
                         </CardService>
                     </Box>
                   </BoxFlex>
-                </BoxFlex>
+                </BoxFlexService>
               </BackgroundServiceSvg>
             </Col>
           </Row>

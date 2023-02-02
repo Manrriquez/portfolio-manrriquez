@@ -7,7 +7,8 @@ import { Box, ButtonPrimary } from '../../assets/styles/GlobalComponents';
 import CountUp from 'react-countup';
 import Curriculum from '../../assets/files/CV.pdf';
 import { BoxFLex } from '../Contact/Styled';
-import { BsBook } from 'react-icons/bs';
+import { BsBook, BsBuilding } from 'react-icons/bs';
+import { AiOutlineCoffee, AiOutlineProject, AiOutlineUser } from 'react-icons/ai'
 
 
 
@@ -25,7 +26,7 @@ const About = () => {
     <StyledSection id="about">
         <Container>
             <Row>
-                <Col size='10rem'>
+                <Col size='18rem'>
                     {/*
                         <Box>
                             <TypographyTitle>SOBRE MIM</TypographyTitle>
@@ -37,19 +38,19 @@ const About = () => {
                     <Row>
                         <Col>
                             <BoxItem>
-                            <Tabs>
-                                <Tab onClick={handleClick} active={active === 0} id={0}>
-                                    <strong>Conheça um pouco sobre mim!</strong>
-                                    <br />
-                                    Transformar sonhos em realidade com projetos de alta qualidade e o meu objetivo!
-                                </Tab>
+                                <Tabs>
+                                    <Tab onClick={handleClick} active={active === 0} id={0}>
+                                        <strong>Conheça um pouco sobre mim!</strong>
+                                        <br />
+                                        Transformar sonhos em realidade com projetos de alta qualidade e o meu objetivo!
+                                    </Tab>
 
-                                <Tab onClick={handleClick} active={active === 1} id={1}>
-                                    <strong>Por que trabalhar comigo?</strong>
-                                    <br />
-                                    Em prol de atingir o apicé da eficiencia em projetos reais e sempre em busca do aprimoramento!
-                                </Tab>
-                            </Tabs>
+                                    <Tab onClick={handleClick} active={active === 1} id={1}>
+                                        <strong>Por que trabalhar comigo?</strong>
+                                        <br />
+                                        Em prol de atingir o apicé da eficiencia em projetos reais e sempre em busca do aprimoramento!
+                                    </Tab>
+                                </Tabs>
                             </BoxItem>
                         </Col>
                     </Row>
@@ -89,7 +90,7 @@ const About = () => {
                                 
                             </TabContent>
                             <TabContent active={active === 1}>
-                            <Row>
+                                <Row style={{alignItems: 'start'}}>
                                     <Col>
                                         <h5 style={{color: '#FCA61F', marginBottom: '7px'}}>Minha carreira</h5>
                                         <h2 style={{color: '#393536', marginBottom: '15px'}}>PORQUE ME CONTRATAR?</h2>
@@ -119,18 +120,48 @@ const About = () => {
                                              Comunicação clara e efetiva: capacidade de se comunicar de forma clara e eficaz, tanto com colegas quanto com clientes.
                                             </ListItemAboutExperience>
                                         </ListAboutExperience>
+                                        
                                     </Col>
                                     <Col>
-                                        <BoxItem>
+                                        <BoxItem style={{float: 'right'}}>
+                                            <CardAboutExperience>
+                                                <CardAboutExperienceSvg><AiOutlineUser /></CardAboutExperienceSvg>
+                                                <div>
+                                                    <p style={{color: '#FCA61F'}}>Idade</p>
+                                                    <strong>20 ANOS</strong>
+                                                </div>
+                                            </CardAboutExperience>
+                                            <CardAboutExperience>
+                                                <CardAboutExperienceSvg><BsBuilding /></CardAboutExperienceSvg>
+                                                <div>
+                                                    <p style={{color: '#FCA61F'}}>Experiencia</p>
+                                                    <strong>1+ ANO</strong>
+                                                </div>
+                                            </CardAboutExperience>
+                                            <CardAboutExperience>
+                                                <CardAboutExperienceSvg><AiOutlineProject /></CardAboutExperienceSvg>
+                                                <div>
+                                                    <p style={{color: '#FCA61F'}}>Projetos</p>
+                                                    <strong>13+ FINALIZADO</strong>
+                                                </div>
+                                            </CardAboutExperience>
                                             <CardAboutExperience>
                                                 <CardAboutExperienceSvg><BsBook /></CardAboutExperienceSvg>
                                                 <div>
-                                                    <small>1+</small>
-                                                    <strong>de experiencia</strong>
+                                                    <p style={{color: '#FCA61F'}}>Estudos</p>
+                                                    <strong>400+ HORAS</strong>
                                                 </div>
                                             </CardAboutExperience>
-                                            <CardAboutExperience>aaaa</CardAboutExperience>
-
+                                            <CardAboutExperience>
+                                                <CardAboutExperienceSvg><AiOutlineCoffee /></CardAboutExperienceSvg>
+                                                <div>
+                                                    <p style={{color: '#FCA61F'}}>Café</p>
+                                                    <strong>346+ COPOS</strong>
+                                                </div>
+                                            </CardAboutExperience>
+                                            <a href="#projects" style={{width: "100%"}}>
+                                                    <ButtonPrimary width="100%" style={{marginTop: '35px'}}>VER PROJETOS</ButtonPrimary>
+                                            </a>
                                         </BoxItem>
                                     </Col>
                                 </Row>

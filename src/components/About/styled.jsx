@@ -68,6 +68,10 @@ const TextCounterDescription = styled.p`
 const BoxItem = styled.div`
 	margin-top: 1.2rem;
 	margin-bottom: 1.2rem;
+
+	@media (max-width: 792px) {
+		width: 100%;
+	}
 `;
 
 const BoxFlex = styled.div`
@@ -82,6 +86,14 @@ const BoxFlex = styled.div`
   border-bottom: 5px solid #FCA61F;
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
+
+  @media (max-width: 792px) {
+	display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
 `;
 
  const Tab = styled.button`
@@ -103,23 +115,50 @@ const BoxFlex = styled.div`
   :hover {
     background-color: ${props => (props.active ? "#FCA61F" : "rgba(196, 196, 196, 0.15)")};
   }
+
+  @media (max-width: 792px) {
+	width: 100%;
+	margin-right: 0px;
+    min-height: 150px;
+  }
 `;
 
 const CardAboutExperience = styled.div`
-	background: #FFFFFF;
-	box-shadow: 0px 10px 30px rgba(165, 164, 172, 0.2);
+	box-shadow: 0px 20px 24px 3px rgb(255 186 94 / 24%);
+	//border: solid 1px #FCA61F;
+	color: #393536;
 	border-radius: 12px;
 	width: max-content;
-    padding: 15px;
+    padding: 15px 25px 15px 25px;
 	display: flex;
+	min-width: 250px;
 	gap: 15px;
-	justify-content: center;
 	align-items: center;
+	margin-bottom: 25px;
+	margin-top: 25px;
+  	position: relative;
+  	transition: 0.7s;
+
+	:hover {
+		bottom: 7px;
+	}
+
+	@media (max-width: 792px) {
+		width: 100%;
+		min-height: 150px;
+	}
 `;
 
 const CardAboutExperienceSvg = styled.div`
-background: rgba(207, 218, 230, 0.25);
-border-radius: 12px;
+	background: rgba(207, 218, 230, 0.25);
+	border-radius: 12px;
+	padding: 10px;
+	display: flex;
+    align-items: center;
+
+	svg {
+		font-size: 30px;
+	}
 `;
 const ListAboutExperience = styled.ul`
   color: #393536;
@@ -127,6 +166,10 @@ const ListAboutExperience = styled.ul`
 const ListItemAboutExperience = styled.li`
   	margin-left: 15px;
 	margin-top: 10px;
+
+	@media (max-width: 992px) {
+		text-align: initial;
+	}
 `;
 const TabContent = styled.div`
   ${props => (props.active ? "" : "display:none")}
