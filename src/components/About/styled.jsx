@@ -54,7 +54,7 @@ const NumberCounterText = styled.h3`
 	font-size: clamp(48px, 3vw, 65px);
 	line-height: 35px;
 	text-align: center;
-	color: #FCA61F;
+	color: #393536;
 	margin-bottom: 1.5rem;
 
 `;
@@ -105,9 +105,32 @@ const BoxFlex = styled.div`
   }
 `;
 
+const CardAboutExperience = styled.div`
+	background: #FFFFFF;
+	box-shadow: 0px 10px 30px rgba(165, 164, 172, 0.2);
+	border-radius: 12px;
+	width: max-content;
+    padding: 15px;
+	display: flex;
+	gap: 15px;
+	justify-content: center;
+	align-items: center;
+`;
 
+const CardAboutExperienceSvg = styled.div`
+background: rgba(207, 218, 230, 0.25);
+border-radius: 12px;
+`;
+const ListAboutExperience = styled.ul`
+  color: #393536;
+`;
+const ListItemAboutExperience = styled.li`
+  	margin-left: 15px;
+	margin-top: 10px;
+`;
 const TabContent = styled.div`
   ${props => (props.active ? "" : "display:none")}
 `;
 
-export {ImageJob, DescriptionText, NumberCounterText, BoxFlex, BoxItem, TextCounterDescription, Tabs, Tab, TabContent};
+export {ImageJob, DescriptionText, NumberCounterText, BoxFlex, BoxItem, TextCounterDescription, CardAboutExperienceSvg,
+	 Tabs, Tab, TabContent, CardAboutExperience, ListAboutExperience, ListItemAboutExperience};

@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { Col, Container, Row, StyledSection } from '../../assets/styles/GlobalGrid';
-import { BoxFlex, BoxItem, DescriptionText, ImageJob, NumberCounterText, Tab, TabContent, Tabs, TextCounterDescription } from './styled';
+import { BoxFlex, BoxItem, CardAboutExperience, CardAboutExperienceSvg, DescriptionText, ImageJob, ListAboutExperience, ListItemAboutExperience, NumberCounterText, Tab, TabContent, Tabs, TextCounterDescription } from './styled';
 import JobImage from '../../assets/img/ImageJob.png'
 import { TypographyDescription, TypographyTitle } from '../../assets/styles/GlobalTypography';
 import { Box, ButtonPrimary } from '../../assets/styles/GlobalComponents';
 import CountUp from 'react-countup';
 import Curriculum from '../../assets/files/CV.pdf';
+import { BoxFLex } from '../Contact/Styled';
+import { BsBook } from 'react-icons/bs';
 
 
 
@@ -24,12 +26,14 @@ const About = () => {
         <Container>
             <Row>
                 <Col size='10rem'>
-                    <Box>
-                        <TypographyTitle>SOBRE MIM</TypographyTitle>
-                        <TypographyDescription>
-                            Uma breve introdução sobre eu, minhas perspectivas de futuro e paixões sobre o mundo tecnologico.
-                        </TypographyDescription>
-                    </Box>
+                    {/*
+                        <Box>
+                            <TypographyTitle>SOBRE MIM</TypographyTitle>
+                            <TypographyDescription>
+                                Uma breve introdução sobre eu, minhas perspectivas de futuro e paixões sobre o mundo tecnologico.
+                            </TypographyDescription>
+                        </Box>
+                    */}
                     <Row>
                         <Col>
                             <BoxItem>
@@ -62,10 +66,16 @@ const About = () => {
                                             <h5 style={{color: '#FCA61F', marginBottom: '7px'}}>Sobre mim</h5>
                                             <h2 style={{color: '#393536', marginBottom: '15px'}}>QUEM E LUIS FERNANDO?</h2>
                                             <DescriptionText>
-                                                Desenvolvedor Full Stack com foco em backend, Ui Design, aficionado por pixel perfect,
-                                                Iniciei minha carreira por volta de 2021, estudando no modo auto didata, sempre fui curioso,
-                                                nunca me contentei em apenas uma área e por conta disto posso dizer com clareza o quão 
-                                                satisfatorio tem sido mergulhar neste mar de possibilidades, conhecimentos e afins. 
+                                                Luis Fernando é um desenvolvedor apaixonado por tecnologia e atualmente trabalha como
+                                                desenvolvedor front-end. No entanto, ele está em uma transição de carreira para o
+                                                desenvolvimento back-end. Luis começou como um auto didata, sempre buscando aprender
+                                                e aprimorar suas habilidades. Ele tem experiência em tecnologias front-end como
+                                                ReactJS, Javascript, Typescript, Sass, Bootstrap, Tailwind, Figma, Github, Styled-Components,
+                                                Material UI e Wordpress, e está se expandindo para tecnologias back-end como Java,
+                                                Spring Boot, Spring Security, Spring Data, JPA, MySQL, Docker, testes, Clean
+                                                Architecture, API REST e outros. A paixão de Luis pela tecnologia e seu espírito
+                                                de auto aprendizado o levaram a se tornar um desenvolvedor altamente capacitado
+                                                 e sempre buscando novas oportunidades para crescer e evoluir.
                                             </DescriptionText>
                                             <BoxFlex>
                                                 <a href={Curriculum} download="CV" target='_blank' style={{width: "100%"}}>
@@ -76,37 +86,54 @@ const About = () => {
                                         </BoxItem>
                                     </Col>
                                 </Row>
-                                <Row>
+                                
+                            </TabContent>
+                            <TabContent active={active === 1}>
+                            <Row>
+                                    <Col>
+                                        <h5 style={{color: '#FCA61F', marginBottom: '7px'}}>Minha carreira</h5>
+                                        <h2 style={{color: '#393536', marginBottom: '15px'}}>PORQUE ME CONTRATAR?</h2>
+                                        <DescriptionText>
+                                            Experiência como desenvolvedor, posso trazer uma combinação
+                                            valiosa de habilidades técnicas e habilidades interpessoais para sua equipe. Meus
+                                            conhecimentos em front-end e back-end me permitem desenvolver soluções de interface
+                                            do usuário altamente interativas, atrativas e funcionais. Além disso, minha paixão por tecnologia
+                                            e minha abordagem de aprendizagem autodidata significa que estou sempre em busca de maneiras
+                                            de me aperfeiçoar e expandir meus conhecimentos.
+                                        </DescriptionText>
+                                        <h4 style={{color: '#393536', marginBottom: '15px', marginTop: '20px'}}>Principais soft skills:</h4>
+                                        <ListAboutExperience>
+                                            <ListItemAboutExperience>
+                                                Mentalidade de solução: foco em soluções e na entrega de valor para o cliente, em vez de simplesmente seguir processos e protocolos.
+                                            </ListItemAboutExperience>
+                                            <ListItemAboutExperience>
+                                                Resolução de problemas: capacidade de identificar, analisar e solucionar problemas de maneira eficiente.
+                                            </ListItemAboutExperience>
+                                            <ListItemAboutExperience>
+                                                Tomada de decisão: habilidade para tomar decisões informadas e eficazes, mesmo em situações de incerteza.
+                                            </ListItemAboutExperience>
+                                            <ListItemAboutExperience>
+                                              Adaptabilidade: capacidade de se adaptar rapidamente a mudanças tecnológicas e a novos projetos.
+                                            </ListItemAboutExperience>
+                                            <ListItemAboutExperience>
+                                             Comunicação clara e efetiva: capacidade de se comunicar de forma clara e eficaz, tanto com colegas quanto com clientes.
+                                            </ListItemAboutExperience>
+                                        </ListAboutExperience>
+                                    </Col>
                                     <Col>
                                         <BoxItem>
-                                        <BoxFlex>
-                                                <BoxItem>
-                                                    <NumberCounterText>
-                                                        1+
-                                                    </NumberCounterText>
-                                                    <TextCounterDescription>Ano <br /> de experiência</TextCounterDescription>
-                                                </BoxItem>
+                                            <CardAboutExperience>
+                                                <CardAboutExperienceSvg><BsBook /></CardAboutExperienceSvg>
+                                                <div>
+                                                    <small>1+</small>
+                                                    <strong>de experiencia</strong>
+                                                </div>
+                                            </CardAboutExperience>
+                                            <CardAboutExperience>aaaa</CardAboutExperience>
 
-                                                <BoxItem>
-                                                    <NumberCounterText>
-                                                        <CountUp end={13} duration={14.75} />+
-                                                    </NumberCounterText>
-                                                    <TextCounterDescription>Projetos <br /> Finalizados</TextCounterDescription>
-                                                </BoxItem>
-
-                                                <BoxItem>
-                                                    <NumberCounterText>
-                                                        <CountUp end={13} duration={14.75} />+
-                                                    </NumberCounterText>
-                                                    <TextCounterDescription>Projetos <br /> Finalizados</TextCounterDescription>
-                                                </BoxItem>
-                                            </BoxFlex>
                                         </BoxItem>
                                     </Col>
                                 </Row>
-                            </TabContent>
-                            <TabContent active={active === 1}>
-                                <h1>Content 2</h1>
                             </TabContent>
                             </BoxItem>
                         </Col>
