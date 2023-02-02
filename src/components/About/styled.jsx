@@ -54,7 +54,7 @@ const NumberCounterText = styled.h3`
 	font-size: clamp(48px, 3vw, 65px);
 	line-height: 35px;
 	text-align: center;
-	color: #393536;
+	color: #FCA61F;
 	margin-bottom: 1.5rem;
 
 `;
@@ -72,16 +72,16 @@ const BoxItem = styled.div`
 
 const BoxFlex = styled.div`
 	display: flex;
-	justify-content: center;
+	justify-content: space-evenly;
 	gap: 3rem;
 	margin-top: 3rem;
 `;
 
  const Tabs = styled.div`
   overflow: hidden;
-  background: #fff;
-  font-family: Open Sans;
-  height: 3em;
+  border-bottom: 5px solid #FCA61F;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
 `;
 
  const Tab = styled.button`
@@ -90,19 +90,22 @@ const BoxFlex = styled.div`
   cursor: pointer;
   width: 40%;
   position: relative;
-
-  margin-right: 0.1em;
-  font-size: 1em;
-  border: ${props => (props.active ? "1px solid #ccc" : "")};
-  border-bottom: ${props => (props.active ? "none" : "")};
-  background-color: ${props => (props.active ? "white" : "lightgray")};
-  height: ${props => (props.active ? "3em" : "2.6em; top:.4em")};
-  transition: background-color 0.5s ease-in-out;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  font-size: 14px;
+  margin-right: 15px;
+  color: ${props => (props.active ? "#FFFFFF" : "#8C8A97")};
+  padding: 15px 10px 15px 10px;
+  font-weight: 500;
+  background-color: ${props => (props.active ? "#FCA61F" : "rgba(196, 196, 196, 0.15)")};
+  height: 100%;
 
   :hover {
-    background-color: white;
+    background-color: ${props => (props.active ? "#FCA61F" : "rgba(196, 196, 196, 0.15)")};
   }
 `;
+
+
 const TabContent = styled.div`
   ${props => (props.active ? "" : "display:none")}
 `;
