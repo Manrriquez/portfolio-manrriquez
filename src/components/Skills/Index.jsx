@@ -2,13 +2,13 @@ import React from 'react'
 import { Col, Container, Row, StyledSection } from '../../assets/styles/GlobalGrid';
 import { TypographyDescription, TypographyTitle } from '../../assets/styles/GlobalTypography';
 import { Box} from '../../assets/styles/GlobalComponents';
-import { AccordionBox, AccordionConjuntTitleAndIcon, AccordionContent, AccordionItem, AccordionTitle, AccordionWrapper, FlexLg, ProgressTitle, Wrapper } from './Styled';
+import { AccordionBox, AccordionConjuntTitleAndIcon, AccordionContent, AccordionItem, AccordionTitle, AccordionWrapper, FlexLg, ImageSkill, ProgressTitle, Wrapper } from './Styled';
 import SkillBar from 'react-skillbars';
 import {BsCodeSlash} from 'react-icons/bs'
 import {BiCodeCurly} from 'react-icons/bi'
 import {MdOutlineDesignServices} from 'react-icons/md'
 import {FiDatabase} from 'react-icons/fi'
-
+import skillImage from '../../assets/img/skills-image.svg'
 
 const skillsFrontend = [
     { type: 'ReactJS', level: 68 },
@@ -93,8 +93,7 @@ const Skills = () => {
                         </TypographyDescription>
                     </Box>
                     <Row>
-                        <Col>
-                            <FlexLg>
+                        <Col size="3rem">
                                 <Wrapper>
                                     <Accordion icon={<BiCodeCurly/>} title="Frontend Development">
                                         <SkillBar skills={skillsFrontend} colors={colors} height={30} />
@@ -105,9 +104,7 @@ const Skills = () => {
                                      <SkillBar skills={skillsBackend} colors={colors} height={30} />
                                     </Accordion>
                                 </Wrapper>
-                            </FlexLg>
 
-                            <FlexLg>
                                 <Wrapper>
                                     <Accordion  icon={<FiDatabase />} title="DevOps" >
                                        <SkillBar skills={skillsDevops} colors={colors} height={30} />     
@@ -118,10 +115,9 @@ const Skills = () => {
                                       <SkillBar skills={skillsOutros} colors={colors} height={30} />
                                     </Accordion>
                                 </Wrapper>
-                            </FlexLg>
-
                         </Col>
-                        
+                        <Col style={{textAlign: 'center'}} size="3rem"><ImageSkill src={skillImage} alt="Figura de 2D animada"/></Col>
+
                     </Row>
                 </Col>
             </Row>

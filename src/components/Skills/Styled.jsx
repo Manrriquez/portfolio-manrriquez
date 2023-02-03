@@ -1,4 +1,33 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const AnimatedImageSkill = keyframes`
+
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70% {
+		transform: translateY(-8px);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: translateY(8px);
+	}
+
+	80% {
+		transform: translateY(6.4px);
+	}
+
+	90% {
+		transform: translateY(-6.4px);
+	}
+`;
 
 
 const Wrapper = styled.div`
@@ -20,6 +49,15 @@ const AccordionItem = styled.div`
     transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
     height: auto;
     max-height: 9999px;
+
+`;
+const ImageSkill = styled.img`
+    width: 370px;
+	animation: ${AnimatedImageSkill} 8s linear 0s infinite;
+
+	@media (max-width: 792px) {
+		display: none;
+	}
 
 `;
 
@@ -88,5 +126,5 @@ const FlexLg = styled.div`
 `;
 
 
-export {Wrapper, AccordionWrapper, AccordionItem, AccordionTitle,
+export {Wrapper, AccordionWrapper, AccordionItem, AccordionTitle, ImageSkill,
      AccordionContent, FlexLg, AccordionConjuntTitleAndIcon, ProgressTitle, AccordionBox};
