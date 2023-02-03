@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { ToastContainer } from 'react-toastify'
-import GlobalStyled from '../v1/src/assets/styles/GlobalStyled'
 import About from './components/About/Index'
 import Banner from './components/Banner/Index'
 import ButtonWhatsApp from './components/ButtonWhatsApp/Index'
@@ -13,6 +12,7 @@ import Projects from './components/Projects/Index'
 import Service from './components/Services/Index'
 import Skills from './components/Skills/Index'
 import 'react-toastify/dist/ReactToastify.css';
+import GlobalStyled from './assets/styles/GlobalStyled'
 
 function App() {
 
