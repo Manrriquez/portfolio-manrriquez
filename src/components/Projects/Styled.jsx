@@ -22,7 +22,7 @@ const BoxProject = styled.div`
 const DescriptionProject = styled.p`
     max-width: 500px;
     margin-bottom: 25px;
-    margin-top: 15px;
+    margin-top: 10px;
     text-align: initial;
 
     @media (max-width: 792px) {
@@ -70,10 +70,44 @@ const CardSlider = styled.div`
 `;
 
 const CardSliderImage = styled.img`
-    width: 100%;
+    width: 600px;
+    height: 300px;
     border-radius: 8px;
     margin-bottom: 15px;
 `;
 
+const ButtonProjectLink = styled.a`
+    background: linear-gradient(180deg, #fdc50f 26.71%, #fb982f 99.36%);
+    box-shadow: 0px 20px 24px 3px rgba(251, 161, 40, 0.42);
+    border-radius: 12px;
+    color: #ffffffff;
+    padding: 10px;
+    align-items: center;
+    display: flex;
 
-export {FlexLg, Bloco, BoxProject, DescriptionProject,DescriptionProjectStatus, CardSlider, CardSliderImage};
+    &:hover {
+        background: white;
+        border: 1px solid #FCA61F;
+        color: #FCA61F;
+    }
+      
+    svg {
+        font-size: 20px;
+    }
+`;
+
+const BoxSkills = styled.div`
+    display: flex;
+    gap: 14px;
+    background-color: #FCA61F;
+    color: #FFFFFFFF;
+    padding: 8px 15px 8px 15px;
+    border-radius: 8px;
+
+    svg {
+        font-size: 20px;
+    }
+`;
+
+
+export {FlexLg, Bloco, BoxProject, DescriptionProject,DescriptionProjectStatus, CardSlider, CardSliderImage, ButtonProjectLink, BoxSkills};

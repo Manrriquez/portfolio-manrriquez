@@ -93,7 +93,8 @@ const Skills = () => {
                         </TypographyDescription>
                     </Box>
                     <Row>
-                        <Col size="3rem">
+                    <Col>
+                            <FlexLg>
                                 <Wrapper>
                                     <Accordion icon={<BiCodeCurly/>} title="Frontend Development">
                                         <SkillBar skills={skillsFrontend} colors={colors} height={30} />
@@ -104,7 +105,9 @@ const Skills = () => {
                                      <SkillBar skills={skillsBackend} colors={colors} height={30} />
                                     </Accordion>
                                 </Wrapper>
+                            </FlexLg>
 
+                            <FlexLg>
                                 <Wrapper>
                                     <Accordion  icon={<FiDatabase />} title="DevOps" >
                                        <SkillBar skills={skillsDevops} colors={colors} height={30} />     
@@ -115,8 +118,9 @@ const Skills = () => {
                                       <SkillBar skills={skillsOutros} colors={colors} height={30} />
                                     </Accordion>
                                 </Wrapper>
+                            </FlexLg>
+
                         </Col>
-                        <Col style={{textAlign: 'center'}} size="3rem"><ImageSkill src={skillImage} alt="Figura de 2D animada"/></Col>
 
                     </Row>
                 </Col>

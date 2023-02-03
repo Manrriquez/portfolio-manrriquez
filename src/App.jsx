@@ -12,6 +12,7 @@ import Navbar from './components/Navbar/Index'
 import Projects from './components/Projects/Index'
 import Service from './components/Services/Index'
 import Skills from './components/Skills/Index'
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 

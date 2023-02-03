@@ -5,6 +5,7 @@ import { Box, ButtonPrimary} from '../../assets/styles/GlobalComponents';
 import { BoxFLex, BoxForm, ButtonDisabled, COlForm, COlMdForm, InputContact, LabelContact, StyledForm, TextareaContact} from './Styled';
 import emailjs from 'emailjs-com';
 import { toast } from 'react-toastify';
+import { BASE_SEND_KEY, BASE_SEND_SERVICE, BASE_SEND_TEMPLATE } from '../../utils/sendEmail';
 
 const EMAIL_REGEX = new RegExp(
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,6}))$/
@@ -28,11 +29,11 @@ const Contact = () => {
             toast.warning("Preencha os todos os campos corretamente!");
         } else {
           if(EMAIL_REGEX.test(dados.email)) {
-            emailjs.send(SERVICE, "template_bdxgdqj", dados ,"j8bW15sy9vE5yMDmW")
+            emailjs.send(BASE_SEND_SERVICE, BASE_SEND_TEMPLATE, dados ,BASE_SEND_KEY)
             .then((result) => {
-              setEmailsuccess(!emailSuccess);
-              setDados(initialState);
-             toast.success("E-mail enviado com sucesso!");
+                 setEmailsuccess(!emailSuccess);
+                 setDados(initialState);
+                toast.success("E-mail enviado com sucesso!");
             })
             .catch(err => toast.error("Erro ao enviar e-mail, por favor contacte comigo através do whatssap no canto superior da tela!"));
           } else {
@@ -42,7 +43,7 @@ const Contact = () => {
     }
 
   return (
-    <StyledSection id="contact">
+    <StyledSection id="contact" style={{paddingBottom: '8rem'}}>
         <Container>
             <Row>
                 <Col size='10rem'>

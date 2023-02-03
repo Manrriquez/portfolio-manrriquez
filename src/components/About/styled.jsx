@@ -137,10 +137,10 @@ const CardAboutExperience = styled.div`
 	margin-bottom: 25px;
 	margin-top: 25px;
   	position: relative;
-  	transition: 0.7s;
+  	transition: 0.6s;
 
 	:hover {
-		bottom: 7px;
+		transform: translateY(-10px);
 	}
 
 	@media (max-width: 792px) {
